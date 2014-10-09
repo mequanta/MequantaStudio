@@ -1,0 +1,60 @@
+﻿<?xml version="1.0"?>
+<Template originator="Alex Lee">
+    <!-- Template Header -->
+    <TemplateConfiguration>
+        <_Name>SmartQuant SellSide Strategy Project</_Name>
+        <_Category>SmartQuant</_Category>
+        <Icon>res:SellSideStrategyTemplate.png</Icon>
+        <_Description>Creates a SmartQuant sellside strategy project</_Description>
+        <LanguageName>C#</LanguageName>
+        <DefaultFilename>MySellSideStrategy</DefaultFilename>
+    </TemplateConfiguration>
+    <!-- Actions -->
+    <Actions>
+        <Open filename="MySellSideStrategy.cs" />
+    </Actions>
+    <!-- Template Content -->
+    <Combine name="${ProjectName}" directory=".">
+        <Options>
+            <StartupProject>${ProjectName}</StartupProject>
+        </Options>
+        <Project name="${ProjectName}" directory="." type="SmartQuant">
+            <Options ExternalConsole="True" />
+            <References>
+                <Reference type="Package" refto="System, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+                <Reference type="Package" refto="SmartQuant" SpecificVersion="false" LocalCopy="false" />
+            </References>
+            <Files>
+                <File name="MySellSideStrategy.cs" AddStandardHeader="True"><![CDATA[using System;
+using SmartQuant;
+
+namespace OpenQuant
+{
+    public class MySellSideStrategy : SellSideStrategy
+    {
+        public MySellSideStrategy(Framework framework, string name) : base(framework, name)
+        {
+        }
+
+        protected override void OnSubscribe(InstrumentList instruments)
+        {
+        }
+
+        protected override void OnUnsubscribe(InstrumentList instruments)
+        {
+        }
+
+        public override void OnSendCommand(ExecutionCommand command)
+        {
+        }
+
+        protected override void OnBar(Instrument instrument, Bar bar)
+        {
+        }
+    }
+}]]></File>
+                <FileTemplateReference TemplateID="CSharpAssemblyInfo" name="AssemblyInfo.cs" />
+            </Files>
+        </Project>
+    </Combine>
+</Template>

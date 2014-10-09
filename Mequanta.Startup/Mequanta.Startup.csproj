@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{6F05E8A8-6783-4B99-A608-48B2D3CDE9A3}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Mequanta.Startup</RootNamespace>
+    <AssemblyName>MequantaStudio</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Externalconsole>true</Externalconsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Externalconsole>true</Externalconsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="MonoDevelop.Ide">
+      <HintPath>C:\Program Files %28x86%29\Xamarin Studio\bin\MonoDevelop.Ide.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoDevelop.Core">
+      <HintPath>C:\Program Files %28x86%29\Xamarin Studio\bin\MonoDevelop.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>C:\Program Files %28x86%29\Xamarin Studio\bin\ICSharpCode.NRefactory.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Addins">
+      <HintPath>C:\Program Files %28x86%29\Xamarin Studio\bin\Mono.Addins.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cairo, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
+    <Reference Include="Mono.TextEditor">
+      <HintPath>C:\Program Files %28x86%29\Xamarin Studio\bin\Mono.TextEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="pango-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MainClass.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
