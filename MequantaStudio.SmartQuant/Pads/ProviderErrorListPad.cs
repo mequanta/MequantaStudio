@@ -6,7 +6,7 @@ using MonoDevelop.Ide.Gui.Components;
 using MonoDevelop.Components;
 using MonoDevelop.Ide;
 
-namespace MonoDevelop.SmartQuant
+namespace MequantaStudio.SmartQuant
 {
     public class ProviderErrorListPad : IPadContent
     {

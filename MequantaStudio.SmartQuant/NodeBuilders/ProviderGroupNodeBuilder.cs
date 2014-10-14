@@ -1,7 +1,7 @@
 ﻿using System;
 using MonoDevelop.Ide.Gui.Components;
 
-namespace MonoDevelop.SmartQuant
+namespace MequantaStudio.SmartQuant
 {
     class ProviderGroupNodeBuilder : TypeNodeBuilder
     {
@@ -30,11 +30,6 @@ namespace MonoDevelop.SmartQuant
         public override void GetNodeAttributes(ITreeNavigator treeNavigator, object dataObject, ref NodeAttributes attributes)
         {
             ProviderGroup folder = (ProviderGroup)dataObject;
-//
-//      attributes |= NodeAttributes.AllowRename;
-//
-//      if (!file.Visible && !treeNavigator.Options ["ShowAllFiles"])
-//        attributes |= NodeAttributes.Hidden;
         }
     }
 }

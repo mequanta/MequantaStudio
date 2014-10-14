@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mequanta.Startup", "Mequanta.Startup\Mequanta.Startup.csproj", "{6F05E8A8-6783-4B99-A608-48B2D3CDE9A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MequantaStudio.SmartQuant", "MequantaStudio.SmartQuant\MequantaStudio.SmartQuant.csproj", "{66697222-3B0D-49D4-984B-68E3D420104D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MequantaStudio.SmartQuant", "MequantaStudio.SmartQuant\MequantaStudio.SmartQuant.csproj", "{5CAB5624-3761-4177-991F-DDF3D8FE0C89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{66697222-3B0D-49D4-984B-68E3D420104D}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{66697222-3B0D-49D4-984B-68E3D420104D}.Debug|x86.Build.0 = Debug|Any CPU
-		{66697222-3B0D-49D4-984B-68E3D420104D}.Release|x86.ActiveCfg = Release|Any CPU
-		{66697222-3B0D-49D4-984B-68E3D420104D}.Release|x86.Build.0 = Release|Any CPU
+		{5CAB5624-3761-4177-991F-DDF3D8FE0C89}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5CAB5624-3761-4177-991F-DDF3D8FE0C89}.Debug|x86.Build.0 = Debug|Any CPU
+		{5CAB5624-3761-4177-991F-DDF3D8FE0C89}.Release|x86.ActiveCfg = Release|Any CPU
+		{5CAB5624-3761-4177-991F-DDF3D8FE0C89}.Release|x86.Build.0 = Release|Any CPU
 		{6F05E8A8-6783-4B99-A608-48B2D3CDE9A3}.Debug|x86.ActiveCfg = Debug|x86
 		{6F05E8A8-6783-4B99-A608-48B2D3CDE9A3}.Debug|x86.Build.0 = Debug|x86
 		{6F05E8A8-6783-4B99-A608-48B2D3CDE9A3}.Release|x86.ActiveCfg = Release|x86
@@ -22,5 +22,53 @@ Global
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Mequanta.Startup\Mequanta.Startup.csproj
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = None
+		$1.ResourceNamePolicy = FileFormatDefault
+		$0.TextStylePolicy = $2
+		$2.inheritsSet = VisualStudio
+		$2.inheritsScope = text/plain
+		$2.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $3
+		$3.IndentSwitchBody = True
+		$3.IndentBlocksInsideExpressions = True
+		$3.AnonymousMethodBraceStyle = NextLine
+		$3.PropertyBraceStyle = NextLine
+		$3.PropertyGetBraceStyle = NextLine
+		$3.PropertySetBraceStyle = NextLine
+		$3.EventBraceStyle = NextLine
+		$3.EventAddBraceStyle = NextLine
+		$3.EventRemoveBraceStyle = NextLine
+		$3.StatementBraceStyle = NextLine
+		$3.ElseNewLinePlacement = NewLine
+		$3.CatchNewLinePlacement = NewLine
+		$3.FinallyNewLinePlacement = NewLine
+		$3.WhileNewLinePlacement = DoNotCare
+		$3.ArrayInitializerWrapping = DoNotChange
+		$3.ArrayInitializerBraceStyle = NextLine
+		$3.BeforeMethodDeclarationParentheses = False
+		$3.BeforeMethodCallParentheses = False
+		$3.BeforeConstructorDeclarationParentheses = False
+		$3.NewLineBeforeConstructorInitializerColon = NewLine
+		$3.NewLineAfterConstructorInitializerColon = SameLine
+		$3.BeforeDelegateDeclarationParentheses = False
+		$3.NewParentheses = False
+		$3.SpacesBeforeBrackets = False
+		$3.inheritsSet = Mono
+		$3.inheritsScope = text/x-csharp
+		$3.scope = text/x-csharp
+		$0.TextStylePolicy = $4
+		$4.inheritsSet = Mono
+		$4.inheritsScope = text/plain
+		$4.scope = text/plain
+		$0.TextStylePolicy = $5
+		$5.inheritsSet = VisualStudio
+		$5.inheritsScope = text/plain
+		$5.scope = application/xml
+		$0.XmlFormattingPolicy = $6
+		$6.inheritsSet = Mono
+		$6.inheritsScope = application/xml
+		$6.scope = application/xml
 	EndGlobalSection
 EndGlobal

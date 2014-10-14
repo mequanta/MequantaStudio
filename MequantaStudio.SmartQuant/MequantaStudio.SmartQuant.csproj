@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{66697222-3B0D-49D4-984B-68E3D420104D}</ProjectGuid>
+    <ProjectGuid>{5CAB5624-3761-4177-991F-DDF3D8FE0C89}</ProjectGuid>
+    <ProjectTypeGuids>{7DBEB09D-BB9F-4D92-A141-A009135475EF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <RootNamespace>MequantaStudio.SmartQuant</RootNamespace>
     <AssemblyName>MequantaStudio.SmartQuant</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,129 +31,244 @@
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-    <Reference Include="gtk-sharp" />
-    <Reference Include="glib-sharp" />
-    <Reference Include="gdk-sharp" />
-    <Reference Include="pango-sharp" />
-    <Reference Include="Mono.Cairo" />
-    <Reference Include="Mono.TextEditor">
-      <HintPath>C:\Program Files %28x86%29\Xamarin Studio\bin\Mono.TextEditor.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.Addins">
-      <HintPath>C:\Program Files %28x86%29\Xamarin Studio\bin\Mono.Addins.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.NRefactory">
-      <HintPath>C:\Program Files %28x86%29\Xamarin Studio\bin\ICSharpCode.NRefactory.dll</HintPath>
+      <Package>C:\Program Files (x86)\Xamarin Studio\bin\Mono.Addins.dll</Package>
     </Reference>
     <Reference Include="MonoDevelop.Core">
-      <HintPath>C:\Program Files %28x86%29\Xamarin Studio\bin\MonoDevelop.Core.dll</HintPath>
+      <Package>C:\Program Files (x86)\Xamarin Studio\bin\MonoDevelop.Core.dll</Package>
     </Reference>
     <Reference Include="MonoDevelop.Ide">
-      <HintPath>C:\Program Files %28x86%29\Xamarin Studio\bin\MonoDevelop.Ide.dll</HintPath>
+      <Package>C:\Program Files (x86)\Xamarin Studio\bin\MonoDevelop.Ide.dll</Package>
     </Reference>
-    <Reference Include="Xwt">
-      <HintPath>C:\Program Files %28x86%29\Xamarin Studio\bin\Xwt.dll</HintPath>
+    <Reference Include="Mono.TextEditor">
+      <Package>C:\Program Files (x86)\Xamarin Studio\bin\Mono.TextEditor.dll</Package>
     </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+      <Package>C:\Program Files (x86)\Xamarin Studio\bin\ICSharpCode.NRefactory.dll</Package>
+    </Reference>
+    <Reference Include="Mono.Cairo" />
     <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="Xwt">
+      <HintPath>..\..\..\..\Program Files %28x86%29\Xamarin Studio\bin\Xwt.dll</HintPath>
+      <Package>C:\Program Files (x86)\Xamarin Studio\bin\Xwt.dll</Package>
+    </Reference>
+    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="pango-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="Mono.Posix, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
+    <Reference Include="MonoDevelop.DesignerSupport, Version=2.6.0.0, Culture=neutral">
+      <Package>C:\Program Files (x86)\Xamarin Studio\AddIns\MonoDevelop.DesignerSupport\MonoDevelop.DesignerSupport.dll</Package>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="SmartQuant">
+      <HintPath>C:\Program Files\SmartQuant Ltd\OpenQuant 2014\SmartQuant.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands.cs" />
+    <Compile Include="SayHelloHandler.cs" />
+    <Compile Include="ExploreInstrumentsHandler.cs" />
+    <Compile Include="ChartCommandHandler.cs" />
+    <Compile Include="Provider.cs" />
+    <Compile Include="gtk-gui\generated.cs" />
+    <Compile Include="Commands\ImportCommands.cs" />
+    <Compile Include="Gui\ImportHistoricalView.cs" />
+    <Compile Include="Gui\QuoteMonitorView.cs" />
+    <Compile Include="Gui\ImportIntrumentWidget.cs" />
+    <Compile Include="gtk-gui\MonoDevelop.SmartQuant.ImportIntrumentWidget.cs" />
+    <Compile Include="Gui\ImportHistoricalWidget.cs" />
+    <Compile Include="Gui\ChartView.cs" />
+    <Compile Include="Initializer.cs" />
+    <Compile Include="NodeBuilders\InstrumentFolderNodeBuilder.cs" />
+    <Compile Include="NodeBuilders\InstrumentNodeBuilder.cs" />
+    <Compile Include="Pads\ProviderErrorListPad.cs" />
+    <Compile Include="OptionsPanel.cs" />
+    <Compile Include="gtk-gui\MonoDevelop.SmartQuant.OptionsPanelWidget.cs" />
+    <Compile Include="Pads\ProviderPad.cs" />
+    <Compile Include="NodeBuilders\ProviderGroupNodeBuilder.cs" />
+    <Compile Include="NodeBuilders\ProviderNodeBuilder.cs" />
+    <Compile Include="Pads\InstrumentPad.cs" />
+    <Compile Include="RunningService.cs" />
+    <Compile Include="SmartQuantProject.cs" />
+    <Compile Include="SmartQuantExecutionModeSet.cs" />
+    <Compile Include="NodeBuilders\ProjectNodeBuilderExtension.cs" />
+    <Compile Include="SmartQuantProjectBinding.cs" />
+    <Compile Include="SmartQuantProjectServiceExtension.cs" />
+    <Compile Include="gtk-gui\MonoDevelop.SmartQuant.ImportHistoricalWidget.cs" />
+    <Compile Include="Pads\PortfolioPad.cs" />
+    <Compile Include="NodeBuilders\PortfolioNodeBuilder.cs" />
+    <Compile Include="Properties\AddinInfo.cs" />
+    <Compile Include="Commands\TestCommands.cs" />
+    <Compile Include="XwtView.cs" />
+    <Compile Include="SmartQuantService.cs" />
+    <Compile Include="SmartQuantExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Manifest.addin.xml">
+      <LogicalName>Manifest.addin.xml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gtk-gui\gui.stetic">
+      <LogicalName>gui.stetic</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\broker_info.png">
+      <LogicalName>broker_info.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\chart.png">
+      <LogicalName>chart.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\chart_template.png">
+      <LogicalName>chart_template.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\csv.png">
+      <LogicalName>csv.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\data.png">
+      <LogicalName>data.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\data_import.png">
+      <LogicalName>data_import.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\data_type.png">
+      <LogicalName>data_type.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\evtmon.png">
+      <LogicalName>evtmon.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\evtmon_reset.png">
+      <LogicalName>evtmon_reset.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\indicator.png">
+      <LogicalName>indicator.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\instrument.png">
+      <LogicalName>instrument.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\market_scanner.png">
+      <LogicalName>market_scanner.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\mode_live.png">
+      <LogicalName>mode_live.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\mode_paper.png">
+      <LogicalName>mode_paper.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\mode_simulation.png">
+      <LogicalName>mode_simulation.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\nxcore.png">
+      <LogicalName>nxcore.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\openquant.png">
+      <LogicalName>openquant.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\order_manager.png">
+      <LogicalName>order_manager.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\orderbook.png">
+      <LogicalName>orderbook.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\output.png">
+      <LogicalName>output.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\perfmon.png">
+      <LogicalName>perfmon.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\perfmon_reset.png">
+      <LogicalName>perfmon_reset.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\performance.png">
+      <LogicalName>performance.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\portfolio.png">
+      <LogicalName>portfolio.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\properties.png">
+      <LogicalName>properties.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\provider_connected.png">
+      <LogicalName>provider_connected.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\provider_disconnected.png">
+      <LogicalName>provider_disconnected.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\provider_errors.png">
+      <LogicalName>provider_errors.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\providers.png">
+      <LogicalName>providers.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\quote_monitor.png">
+      <LogicalName>quote_monitor.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\solution.png">
+      <LogicalName>solution.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\strategy_logs.png">
+      <LogicalName>strategy_logs.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\strategy_monitor.png">
+      <LogicalName>strategy_monitor.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\taq.png">
+      <LogicalName>taq.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\InstrumentStrategyProject.xpt.xml">
+      <LogicalName>InstrumentStrategyProject.xpt.xml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\ScenarioProject.xpt.xml">
+      <LogicalName>ScenarioProject.xpt.xml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\SellSideStrategyProject.xpt.xml">
+      <LogicalName>SellSideStrategyProject.xpt.xml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\StrategyProject.xpt.xml">
+      <LogicalName>StrategyProject.xpt.xml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\group-16.png">
+      <LogicalName>group-16.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\group-by-category.png">
+      <LogicalName>group-by-category.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\InstrumentStrategyTemplate.png">
+      <LogicalName>InstrumentStrategyTemplate.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\SellSideStrategyTemplate.png">
+      <LogicalName>SellSideStrategyTemplate.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\ScenarioTemplate.png">
+      <LogicalName>ScenarioTemplate.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\StrategyTemplate.png">
+      <LogicalName>StrategyTemplate.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\solution_pause.png">
+      <LogicalName>solution_pause.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\solution_start.png">
+      <LogicalName>solution_start.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\solution_step.png">
+      <LogicalName>solution_step.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\solution_stop.png">
+      <LogicalName>solution_stop.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\redserver.png">
+      <LogicalName>redserver.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\project-16.png">
+      <LogicalName>project-16.png</LogicalName>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Folder Include="templates\" />
-    <Folder Include="Gui\" />
+    <Folder Include="Icons\" />
+    <Folder Include="Templates\" />
     <Folder Include="Commands\" />
-    <Folder Include="icons\" />
-    <Folder Include="Pads\" />
+    <Folder Include="Gui\" />
     <Folder Include="NodeBuilders\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="templates\InstrumentStrategyProject.xpt.xml" />
-    <None Include="templates\ScenarioProject.xpt.xml" />
-    <None Include="templates\SellSideStrategyProject.xpt.xml" />
-    <None Include="templates\StrategyProject.xpt.xml" />
-    <None Include="icons\broker_info.png" />
-    <None Include="icons\chart.png" />
-    <None Include="icons\chart_template.png" />
-    <None Include="icons\csv.png" />
-    <None Include="icons\data.png" />
-    <None Include="icons\data_import.png" />
-    <None Include="icons\data_type.png" />
-    <None Include="icons\evtmon.png" />
-    <None Include="icons\evtmon_reset.png" />
-    <None Include="icons\group-16.png" />
-    <None Include="icons\group-by-category.png" />
-    <None Include="icons\indicator.png" />
-    <None Include="icons\instrument.png" />
-    <None Include="icons\InstrumentStrategyTemplate.png" />
-    <None Include="icons\market_scanner.png" />
-    <None Include="icons\mode_live.png" />
-    <None Include="icons\mode_paper.png" />
-    <None Include="icons\mode_simulation.png" />
-    <None Include="icons\nxcore.png" />
-    <None Include="icons\openquant.png" />
-    <None Include="icons\orderbook.png" />
-    <None Include="icons\order_manager.png" />
-    <None Include="icons\output.png" />
-    <None Include="icons\perfmon.png" />
-    <None Include="icons\perfmon_reset.png" />
-    <None Include="icons\performance.png" />
-    <None Include="icons\portfolio.png" />
-    <None Include="icons\project-16.png" />
-    <None Include="icons\project-overlay-16.png" />
-    <None Include="icons\properties.png" />
-    <None Include="icons\providers.png" />
-    <None Include="icons\provider_connected.png" />
-    <None Include="icons\provider_disconnected.png" />
-    <None Include="icons\provider_errors.png" />
-    <None Include="icons\quote_monitor.png" />
-    <None Include="icons\redserver.png" />
-    <None Include="icons\ScenarioTemplate.png" />
-    <None Include="icons\SellSideStrategyTemplate.png" />
-    <None Include="icons\solution.png" />
-    <None Include="icons\solution_pause.png" />
-    <None Include="icons\solution_start.png" />
-    <None Include="icons\solution_step.png" />
-    <None Include="icons\solution_stop.png" />
-    <None Include="icons\StrategyTemplate.png" />
-    <None Include="icons\strategy_logs.png" />
-    <None Include="icons\strategy_monitor.png" />
-    <None Include="icons\taq.png" />
-    <None Include="Manifest.addin.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Gui\ChartView.cs" />
-    <Compile Include="Gui\DataManagerWidget.cs" />
-    <Compile Include="Gui\ImportHistoricalView.cs" />
-    <Compile Include="Gui\ImportHistoricalWidget.cs" />
-    <Compile Include="Gui\ImportIntrumentWidget.cs" />
-    <Compile Include="Gui\QuoteMonitorView.cs" />
-    <Compile Include="Commands\ImportCommands.cs" />
-    <Compile Include="Pads\InstrumentPad.cs" />
-    <Compile Include="Pads\ProviderErrorListPad.cs" />
-    <Compile Include="Pads\ProviderPad.cs" />
-    <Compile Include="NodeBuilders\InstrumentFolderNode.cs" />
-    <Compile Include="NodeBuilders\InstrumentFolderNodeBuilder.cs" />
-    <Compile Include="NodeBuilders\InstrumentNode.cs" />
-    <Compile Include="NodeBuilders\InstrumentNodeBuilder.cs" />
-    <Compile Include="NodeBuilders\ProjectNodeBuilderExtension.cs" />
-    <Compile Include="NodeBuilders\ProviderGroupNodeBuilder.cs" />
-    <Compile Include="NodeBuilders\ProviderNodeBuilder.cs" />
-    <Compile Include="Commands.cs" />
-    <Compile Include="ExploreInstrumentsHandler.cs" />
-    <Compile Include="Initializer.cs" />
-    <Compile Include="OptionsPanel.cs" />
-    <Compile Include="OrderManagerWidget.cs" />
-    <Compile Include="Provider.cs" />
-    <Compile Include="ProviderGroup.cs" />
-    <Compile Include="ProviderItem.cs" />
-    <Compile Include="ProviderItemDescriptor.cs" />
-    <Compile Include="ProviderItemPropertyProvider.cs" />
-    <Compile Include="ProviderType.cs" />
-    <Compile Include="RunningService.cs" />
-    <Compile Include="SayHelloHandler.cs" />
-    <Compile Include="SmartQuantExecutionModeSet.cs" />
-    <Compile Include="SmartQuantProject.cs" />
-    <Compile Include="SmartQuantProjectBinding.cs" />
-    <Compile Include="SmartQuantProjectServiceExtension.cs" />
-    <Compile Include="Pads\PortfolioPad.cs" />
+    <Folder Include="Pads\" />
   </ItemGroup>
 </Project>

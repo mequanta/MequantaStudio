@@ -9,13 +9,13 @@ using MonoDevelop.Components.PropertyGrid;
 using Gdk;
 using MonoDevelop.Ide;
 
-namespace MonoDevelop.SmartQuant
+namespace MequantaStudio.SmartQuant
 {
-    public class PortfolioPad : AbstractPadContent
+    public class PortfolioPad : TreeViewPad
     {
         //    InvisibleFrame frame;
         //    PropertyGrid grid;;
-        PadTreeView treeView;
+//        PadTreeView treeView;
         //    public override void Initialize(NodeBuilder[] builders, TreePadOption[] options, string contextMenuPath)
         //    {
         //      DockItemToolbar topToolbar = Window.GetToolbar(PositionType.Top);
@@ -23,46 +23,39 @@ namespace MonoDevelop.SmartQuant
         //      topToolbar.Add(refreshButton);
         //      topToolbar.ShowAll();
         //    }
-        public PortfolioPad()
-        {
-//      grid = new PropertyGrid ();
-//      frame = new InvisibleFrame ();
-//      frame.Add (grid);
-//      frame.ShowAll ();
-            TreeStore model = new TreeStore(typeof(Icon), typeof(string));
-            TreeViewColumn iconColumn = new TreeViewColumn();
-            iconColumn.Title = "Icon";
-            CellRendererIcon iconCell = new CellRendererIcon();
-            iconColumn.PackStart(iconCell, true);
-            TreeViewColumn titleColumn = new TreeViewColumn();
-            titleColumn.Title = "Name";
-            CellRendererText titleCell = new CellRendererText();
-            titleColumn.PackStart(titleCell, true);
-            model.AppendValues(ImageService.GetPixbuf(Gtk.Stock.About), "haha");
-            model.AppendValues(ImageService.GetPixbuf(Gtk.Stock.Add), "dddd");
-            model.AppendValues(ImageService.GetPixbuf(Gtk.Stock.Add), "xdddd");
-//            model.AppendValues()
-            treeView = new PadTreeView();
+//        public PortfolioPad()
+//        {
 
-            treeView.AppendColumn("Icon", iconCell, "pixbuf", 0);
-            treeView.AppendColumn("Name", new CellRendererText(), "text", 1);
-//            treeView.AppendColumn(titleColumn);
-            treeView.HeadersVisible = true;
-            treeView.Model = model;
-            Control.ShowAll();
-        }
+            //      grid = new PropertyGrid ();
+            //      frame = new InvisibleFrame ();
+            //      frame.Add (grid);
+            //      frame.ShowAll ();
+            //            TreeStore model = new TreeStore(typeof(Icon), typeof(string));
+            //            TreeViewColumn iconColumn = new TreeViewColumn();
+            //            iconColumn.Title = "Icon";
+            //            CellRendererIcon iconCell = new CellRendererIcon();
+            //            iconColumn.PackStart(iconCell, true);
+            //            TreeViewColumn titleColumn = new TreeViewColumn();
+            //            titleColumn.Title = "Name";
+            //            CellRendererText titleCell = new CellRendererText();
+            //            titleColumn.PackStart(titleCell, true);
+            //            model.AppendValues(ImageService.GetPixbuf(Gtk.Stock.About), "haha");
+            //            model.AppendValues(ImageService.GetPixbuf(Gtk.Stock.Add), "dddd");
+            //            model.AppendValues(ImageService.GetPixbuf(Gtk.Stock.Add), "xdddd");
+            ////            model.AppendValues()
+            //            treeView = new PadTreeView();
+            //
+            //            treeView.AppendColumn("Icon", iconCell, "pixbuf", 0);
+            //            treeView.AppendColumn("Name", new CellRendererText(), "text", 1);
+            ////            treeView.AppendColumn(titleColumn);
+            //            treeView.HeadersVisible = true;
+            //            treeView.Model = model;
+//            Control.ShowAll();
+//        }
 
-        public override Gtk.Widget Control
-        {
-            get { return treeView; }
-        }
+//        public override Gtk.Widget Control
+//        {
+//            get { return treeView; }
+//        }
     }
-    //    public class PortfolioPad : AbstractPadContent
-    //    {
-    //        ExtensibleTreeView treeView;
-    //        public PortfolioPad() : base("Portfolios", Gtk.Stock.Connect)
-    //        {
-    //        }
-    //    }
 }
-
