@@ -70,23 +70,17 @@
     <Compile Include="SayHelloHandler.cs" />
     <Compile Include="ExploreInstrumentsHandler.cs" />
     <Compile Include="ChartCommandHandler.cs" />
-    <Compile Include="Provider.cs" />
     <Compile Include="gtk-gui\generated.cs" />
     <Compile Include="Commands\ImportCommands.cs" />
     <Compile Include="Gui\ImportHistoricalView.cs" />
-    <Compile Include="Gui\QuoteMonitorView.cs" />
     <Compile Include="Gui\ImportIntrumentWidget.cs" />
     <Compile Include="gtk-gui\MonoDevelop.SmartQuant.ImportIntrumentWidget.cs" />
     <Compile Include="Gui\ImportHistoricalWidget.cs" />
-    <Compile Include="Gui\ChartView.cs" />
     <Compile Include="Initializer.cs" />
-    <Compile Include="NodeBuilders\InstrumentFolderNodeBuilder.cs" />
-    <Compile Include="NodeBuilders\InstrumentNodeBuilder.cs" />
     <Compile Include="Pads\ProviderErrorListPad.cs" />
     <Compile Include="OptionsPanel.cs" />
     <Compile Include="gtk-gui\MonoDevelop.SmartQuant.OptionsPanelWidget.cs" />
     <Compile Include="Pads\ProviderPad.cs" />
-    <Compile Include="NodeBuilders\ProviderGroupNodeBuilder.cs" />
     <Compile Include="NodeBuilders\ProviderNodeBuilder.cs" />
     <Compile Include="Pads\InstrumentPad.cs" />
     <Compile Include="RunningService.cs" />
@@ -103,6 +97,25 @@
     <Compile Include="XwtView.cs" />
     <Compile Include="SmartQuantService.cs" />
     <Compile Include="SmartQuantExtensions.cs" />
+    <Compile Include="NodeBuilders\InstrumentNodeBuilder.cs" />
+    <Compile Include="PropertyNodeCommandHandler.cs" />
+    <Compile Include="Commands\AddNewInstrumentHandler.cs" />
+    <Compile Include="Gui\NewInstrumentDialog.cs" />
+    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.NewInstrumentDialog.cs" />
+    <Compile Include="ViewContents\AccountViewContent.cs" />
+    <Compile Include="ViewContents\OrderManagerViewContent.cs" />
+    <Compile Include="ViewContents\StrategyMonitorViewContent.cs" />
+    <Compile Include="ViewContents\QuoteMonitorViewContent.cs" />
+    <Compile Include="ViewContents\ChartViewContent.cs" />
+    <Compile Include="ViewContents\DataManagerViewContent.cs" />
+    <Compile Include="ViewContents\ImportInstrumentViewContent.cs" />
+    <Compile Include="ViewContents\ImportHistoricalDataViewContent.cs" />
+    <Compile Include="ViewContents\InstrumentDataViewContent.cs" />
+    <Compile Include="ViewContents\PortfolioViewContent.cs" />
+    <Compile Include="Gui\AccountWidget.cs" />
+    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.AccountWidget.cs" />
+    <Compile Include="Gui\EditTradeDialog.cs" />
+    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.EditTradeDialog.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Manifest.addin.xml">
@@ -270,5 +283,7 @@
     <Folder Include="Gui\" />
     <Folder Include="NodeBuilders\" />
     <Folder Include="Pads\" />
+    <Folder Include="e:\works\MequantaStudio\MequantaStudio.SmartQuant\" />
+    <Folder Include="ViewContents\" />
   </ItemGroup>
 </Project>

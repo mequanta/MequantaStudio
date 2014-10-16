@@ -5,7 +5,9 @@ namespace MonoDevelop.SmartQuant
 	public partial class OptionsPanelWidget
 	{
 		private global::Gtk.Notebook notebook1;
+		
 		private global::Gtk.Label label1;
+		
 		private global::Gtk.Label label2;
 
 		protected virtual void Build ()

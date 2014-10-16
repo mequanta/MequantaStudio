@@ -7,7 +7,7 @@ namespace MonoDevelop.SmartQuant
     {
         protected override void Run()
         {
-            ChartView.Show();
+//            ChartView.Show();
         }
 
         protected override void Update(CommandInfo info)

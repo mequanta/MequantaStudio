@@ -14,7 +14,8 @@ namespace MequantaStudio.SmartQuant
         public override void Initialize(NodeBuilder[] builders, TreePadOption[] options, string contextMenuPath)
         {
             base.Initialize(builders, options, contextMenuPath);
-            TreeView.LoadTree(SmartQuantService.GetInstrumentRootNode());
+            foreach (var node in SmartQuantService.GetProviderRootNodes())
+                TreeView.AddChild(node);
             Control.ShowAll();
         }
     }

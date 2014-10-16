@@ -5,21 +5,37 @@ namespace MonoDevelop.SmartQuant
 	public partial class ImportIntrumentWidget
 	{
 		private global::Gtk.HBox hbox2;
+		
 		private global::Gtk.VBox vbox3;
+		
 		private global::Gtk.Frame frame2;
+		
 		private global::Gtk.Alignment GtkAlignment;
+		
 		private global::Gtk.HBox hbox3;
+		
 		private global::Gtk.Table table3;
+		
 		private global::Gtk.CheckButton checkbutton1;
+		
 		private global::Gtk.CheckButton checkbutton2;
+		
 		private global::Gtk.CheckButton checkbutton3;
+		
 		private global::Gtk.ComboBox combobox5;
+		
 		private global::Gtk.ComboBox combobox6;
+		
 		private global::Gtk.ComboBox combobox7;
+		
 		private global::Gtk.Label GtkLabel1;
+		
 		private global::Gtk.ScrolledWindow GtkScrolledWindow;
+		
 		private global::Gtk.TreeView treeview2;
+		
 		private global::Gtk.VBox vbox2;
+		
 		private global::Gtk.Button button1;
 
 		protected virtual void Build ()

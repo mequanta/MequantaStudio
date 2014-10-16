@@ -5,27 +5,49 @@ namespace MonoDevelop.SmartQuant
 	public partial class ImportHistoricalWidget
 	{
 		private global::Gtk.UIManager UIManager;
+		
 		private global::Gtk.Action addAction;
+		
 		private global::Gtk.Action removeAction;
+		
 		private global::Gtk.Action mediaPlayAction;
+		
 		private global::Gtk.Action mediaStopAction;
+		
 		private global::Gtk.VBox vbox1;
+		
 		private global::Gtk.Toolbar toolbar1;
+		
 		private global::Gtk.Frame frame1;
+		
 		private global::Gtk.Alignment GtkAlignment;
+		
 		private global::Gtk.HBox hbox1;
+		
 		private global::Gtk.Table table1;
+		
 		private global::Gtk.ComboBox combobox1;
+		
 		private global::Gtk.ComboBox combobox2;
+		
 		private global::Gtk.Label label1;
+		
 		private global::Gtk.Label label2;
+		
 		private global::Gtk.Table table2;
+		
 		private global::Gtk.ComboBox combobox3;
+		
 		private global::Gtk.ComboBox combobox4;
+		
 		private global::Gtk.Label label3;
+		
 		private global::Gtk.Label label4;
+		
 		private global::Gtk.Label GtkLabel;
+		
 		private global::Gtk.ScrolledWindow GtkScrolledWindow;
+		
 		private global::Gtk.TreeView treeview1;
 
 		protected virtual void Build ()
