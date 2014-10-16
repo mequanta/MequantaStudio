@@ -6,6 +6,8 @@ namespace MequantaStudio.SmartQuant
 	{
 		private global::Gtk.Button button18;
 		
+		private global::Gtk.Button button52;
+		
 		private global::Gtk.Button button17;
 
 		protected virtual void Build ()
@@ -30,21 +32,32 @@ namespace MequantaStudio.SmartQuant
 			w3.Expand = false;
 			w3.Fill = false;
 			// Container child __gtksharp_134_Stetic_TopLevelDialog_ActionArea.Gtk.ButtonBox+ButtonBoxChild
+			this.button52 = new global::Gtk.Button ();
+			this.button52.CanFocus = true;
+			this.button52.Name = "button52";
+			this.button52.UseUnderline = true;
+			this.button52.Label = global::Mono.Unix.Catalog.GetString ("GtkButton");
+			this.AddActionWidget (this.button52, 0);
+			global::Gtk.ButtonBox.ButtonBoxChild w4 = ((global::Gtk.ButtonBox.ButtonBoxChild)(w2 [this.button52]));
+			w4.Position = 1;
+			w4.Expand = false;
+			w4.Fill = false;
+			// Container child __gtksharp_134_Stetic_TopLevelDialog_ActionArea.Gtk.ButtonBox+ButtonBoxChild
 			this.button17 = new global::Gtk.Button ();
 			this.button17.CanFocus = true;
 			this.button17.Name = "button17";
 			this.button17.UseUnderline = true;
 			this.button17.Label = global::Mono.Unix.Catalog.GetString ("GtkButton");
 			this.AddActionWidget (this.button17, 0);
-			global::Gtk.ButtonBox.ButtonBoxChild w4 = ((global::Gtk.ButtonBox.ButtonBoxChild)(w2 [this.button17]));
-			w4.Position = 1;
-			w4.Expand = false;
-			w4.Fill = false;
+			global::Gtk.ButtonBox.ButtonBoxChild w5 = ((global::Gtk.ButtonBox.ButtonBoxChild)(w2 [this.button17]));
+			w5.Position = 2;
+			w5.Expand = false;
+			w5.Fill = false;
 			if ((this.Child != null)) {
 				this.Child.ShowAll ();
 			}
-			this.DefaultWidth = 359;
-			this.DefaultHeight = 282;
+			this.DefaultWidth = 285;
+			this.DefaultHeight = 222;
 			this.Show ();
 		}
 	}

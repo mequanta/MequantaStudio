@@ -4,7 +4,6 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5CAB5624-3761-4177-991F-DDF3D8FE0C89}</ProjectGuid>
-    <ProjectTypeGuids>{7DBEB09D-BB9F-4D92-A141-A009135475EF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <RootNamespace>MequantaStudio.SmartQuant</RootNamespace>
     <AssemblyName>MequantaStudio.SmartQuant</AssemblyName>
@@ -31,39 +30,26 @@
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-    <Reference Include="Mono.Addins">
-      <Package>C:\Program Files (x86)\Xamarin Studio\bin\Mono.Addins.dll</Package>
-    </Reference>
-    <Reference Include="MonoDevelop.Core">
-      <Package>C:\Program Files (x86)\Xamarin Studio\bin\MonoDevelop.Core.dll</Package>
-    </Reference>
-    <Reference Include="MonoDevelop.Ide">
-      <Package>C:\Program Files (x86)\Xamarin Studio\bin\MonoDevelop.Ide.dll</Package>
-    </Reference>
-    <Reference Include="Mono.TextEditor">
-      <Package>C:\Program Files (x86)\Xamarin Studio\bin\Mono.TextEditor.dll</Package>
-    </Reference>
-    <Reference Include="ICSharpCode.NRefactory">
-      <Package>C:\Program Files (x86)\Xamarin Studio\bin\ICSharpCode.NRefactory.dll</Package>
-    </Reference>
+    <Reference Include="Mono.Addins" />
+    <Reference Include="MonoDevelop.Core" />
+    <Reference Include="MonoDevelop.Ide" />
+    <Reference Include="Mono.TextEditor" />
+    <Reference Include="ICSharpCode.NRefactory" />
     <Reference Include="Mono.Cairo" />
     <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="Xwt">
       <HintPath>..\..\..\..\Program Files %28x86%29\Xamarin Studio\bin\Xwt.dll</HintPath>
-      <Package>C:\Program Files (x86)\Xamarin Studio\bin\Xwt.dll</Package>
     </Reference>
     <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="pango-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-    <Reference Include="Mono.Posix, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
-    <Reference Include="MonoDevelop.DesignerSupport, Version=2.6.0.0, Culture=neutral">
-      <Package>C:\Program Files (x86)\Xamarin Studio\AddIns\MonoDevelop.DesignerSupport\MonoDevelop.DesignerSupport.dll</Package>
-    </Reference>
+    <Reference Include="MonoDevelop.DesignerSupport, Version=2.6.0.0, Culture=neutral" />
     <Reference Include="System.Drawing" />
     <Reference Include="SmartQuant">
-      <HintPath>C:\Program Files\SmartQuant Ltd\OpenQuant 2014\SmartQuant.dll</HintPath>
+      <HintPath>"C:\Program Files\SmartQuant Ltd\OpenQuant 2014\SmartQuant.dll"</HintPath>
     </Reference>
+    <Reference Include="Mono.Posix" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands.cs" />
@@ -116,6 +102,18 @@
     <Compile Include="gtk-gui\MequantaStudio.SmartQuant.AccountWidget.cs" />
     <Compile Include="Gui\EditTradeDialog.cs" />
     <Compile Include="gtk-gui\MequantaStudio.SmartQuant.EditTradeDialog.cs" />
+    <Compile Include="Gui\CompressBarDialog.cs" />
+    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.CompressBarDialog.cs" />
+    <Compile Include="Gui\AddOrEditBidDialog.cs" />
+    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.AddOrEditBidDialog.cs" />
+    <Compile Include="Gui\NewBarSeriesDialog.cs" />
+    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.NewBarSeriesDialog.cs" />
+    <Compile Include="Gui\InstrumentDataWidget.cs" />
+    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.InstrumentDataWidget.cs" />
+    <Compile Include="Gui\OrderManagerWidget.cs" />
+    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.OrderManagerWidget.cs" />
+    <Compile Include="Gui\PortfolioWidget.cs" />
+    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.PortfolioWidget.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Manifest.addin.xml">
@@ -283,7 +281,6 @@
     <Folder Include="Gui\" />
     <Folder Include="NodeBuilders\" />
     <Folder Include="Pads\" />
-    <Folder Include="e:\works\MequantaStudio\MequantaStudio.SmartQuant\" />
     <Folder Include="ViewContents\" />
   </ItemGroup>
 </Project>

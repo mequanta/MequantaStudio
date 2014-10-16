@@ -96,7 +96,8 @@ namespace MequantaStudio.SmartQuant
 			// Container child table4.Gtk.Table+TableChild
 			this.label10 = new global::Gtk.Label ();
 			this.label10.Name = "label10";
-			this.label10.LabelProp = global::Mono.Unix.Catalog.GetString ("label10");
+			this.label10.Xalign = 0F;
+			this.label10.LabelProp = global::Mono.Unix.Catalog.GetString ("Symbol");
 			this.table4.Add (this.label10);
 			global::Gtk.Table.TableChild w6 = ((global::Gtk.Table.TableChild)(this.table4 [this.label10]));
 			w6.XOptions = ((global::Gtk.AttachOptions)(4));
@@ -104,7 +105,8 @@ namespace MequantaStudio.SmartQuant
 			// Container child table4.Gtk.Table+TableChild
 			this.label11 = new global::Gtk.Label ();
 			this.label11.Name = "label11";
-			this.label11.LabelProp = global::Mono.Unix.Catalog.GetString ("label11");
+			this.label11.Xalign = 0F;
+			this.label11.LabelProp = global::Mono.Unix.Catalog.GetString ("Exchange");
 			this.table4.Add (this.label11);
 			global::Gtk.Table.TableChild w7 = ((global::Gtk.Table.TableChild)(this.table4 [this.label11]));
 			w7.TopAttach = ((uint)(2));
@@ -114,7 +116,8 @@ namespace MequantaStudio.SmartQuant
 			// Container child table4.Gtk.Table+TableChild
 			this.label12 = new global::Gtk.Label ();
 			this.label12.Name = "label12";
-			this.label12.LabelProp = global::Mono.Unix.Catalog.GetString ("label12");
+			this.label12.Xalign = 0F;
+			this.label12.LabelProp = global::Mono.Unix.Catalog.GetString ("Currency");
 			this.table4.Add (this.label12);
 			global::Gtk.Table.TableChild w8 = ((global::Gtk.Table.TableChild)(this.table4 [this.label12]));
 			w8.TopAttach = ((uint)(3));
@@ -124,7 +127,8 @@ namespace MequantaStudio.SmartQuant
 			// Container child table4.Gtk.Table+TableChild
 			this.label9 = new global::Gtk.Label ();
 			this.label9.Name = "label9";
-			this.label9.LabelProp = global::Mono.Unix.Catalog.GetString ("label9");
+			this.label9.Xalign = 0F;
+			this.label9.LabelProp = global::Mono.Unix.Catalog.GetString ("Type");
 			this.table4.Add (this.label9);
 			global::Gtk.Table.TableChild w9 = ((global::Gtk.Table.TableChild)(this.table4 [this.label9]));
 			w9.TopAttach = ((uint)(1));
@@ -168,8 +172,8 @@ namespace MequantaStudio.SmartQuant
 			if ((this.Child != null)) {
 				this.Child.ShowAll ();
 			}
-			this.DefaultWidth = 264;
-			this.DefaultHeight = 220;
+			this.DefaultWidth = 225;
+			this.DefaultHeight = 188;
 			this.Show ();
 		}
 	}
