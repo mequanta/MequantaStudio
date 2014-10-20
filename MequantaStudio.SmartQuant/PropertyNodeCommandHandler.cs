@@ -4,7 +4,7 @@ using MonoDevelop.DesignerSupport;
 
 namespace MequantaStudio.SmartQuant
 {
-    class PropertyNodeCommandHandler: NodeCommandHandler, IPropertyPadProvider
+    public class PropertyNodeCommandHandler : NodeCommandHandler, IPropertyPadProvider
     {
         public object GetActiveComponent()
         {

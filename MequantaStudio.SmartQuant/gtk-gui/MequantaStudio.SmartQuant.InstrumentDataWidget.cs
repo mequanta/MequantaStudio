@@ -16,13 +16,13 @@ namespace MequantaStudio.SmartQuant
 		
 		private global::Gtk.ScrolledWindow GtkScrolledWindow;
 		
-		private global::Gtk.TreeView treeview1;
+		private global::Gtk.TreeView dsTvw;
 		
 		private global::Gtk.Notebook notebook1;
 		
 		private global::Gtk.ScrolledWindow GtkScrolledWindow1;
 		
-		private global::Gtk.TreeView treeview2;
+		private global::Gtk.TreeView detailTvw;
 		
 		private global::Gtk.Label label3;
 
@@ -42,7 +42,8 @@ namespace MequantaStudio.SmartQuant
 			this.vbox2.Name = "vbox2";
 			this.vbox2.Spacing = 6;
 			// Container child vbox2.Gtk.Box+BoxChild
-			this.UIManager.AddUiFromString ("<ui><toolbar name='toolbar1'><toolitem name='refreshAction' action='refreshAction'/></toolbar></ui>");
+			this.UIManager.AddUiFromString ("<ui><toolbar name=\'toolbar1\'><toolitem name=\'refreshAction\' action=\'refreshAction" +
+			"\'/></toolbar></ui>");
 			this.toolbar1 = ((global::Gtk.Toolbar)(this.UIManager.GetWidget ("/toolbar1")));
 			this.toolbar1.Name = "toolbar1";
 			this.toolbar1.ShowArrow = false;
@@ -61,10 +62,10 @@ namespace MequantaStudio.SmartQuant
 			this.GtkScrolledWindow.Name = "GtkScrolledWindow";
 			this.GtkScrolledWindow.ShadowType = ((global::Gtk.ShadowType)(1));
 			// Container child GtkScrolledWindow.Gtk.Container+ContainerChild
-			this.treeview1 = new global::Gtk.TreeView ();
-			this.treeview1.CanFocus = true;
-			this.treeview1.Name = "treeview1";
-			this.GtkScrolledWindow.Add (this.treeview1);
+			this.dsTvw = new global::Gtk.TreeView ();
+			this.dsTvw.CanFocus = true;
+			this.dsTvw.Name = "dsTvw";
+			this.GtkScrolledWindow.Add (this.dsTvw);
 			this.vpaned1.Add (this.GtkScrolledWindow);
 			global::Gtk.Paned.PanedChild w5 = ((global::Gtk.Paned.PanedChild)(this.vpaned1 [this.GtkScrolledWindow]));
 			w5.Resize = false;
@@ -78,10 +79,10 @@ namespace MequantaStudio.SmartQuant
 			this.GtkScrolledWindow1.Name = "GtkScrolledWindow1";
 			this.GtkScrolledWindow1.ShadowType = ((global::Gtk.ShadowType)(1));
 			// Container child GtkScrolledWindow1.Gtk.Container+ContainerChild
-			this.treeview2 = new global::Gtk.TreeView ();
-			this.treeview2.CanFocus = true;
-			this.treeview2.Name = "treeview2";
-			this.GtkScrolledWindow1.Add (this.treeview2);
+			this.detailTvw = new global::Gtk.TreeView ();
+			this.detailTvw.CanFocus = true;
+			this.detailTvw.Name = "detailTvw";
+			this.GtkScrolledWindow1.Add (this.detailTvw);
 			this.notebook1.Add (this.GtkScrolledWindow1);
 			// Notebook tab
 			this.label3 = new global::Gtk.Label ();

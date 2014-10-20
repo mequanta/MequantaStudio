@@ -28,4 +28,32 @@ namespace MequantaStudio.SmartQuant.Commands
 			info.Enabled = true;
 		}
 	}
+
+    public class OpenInstrumentDataHandler: CommandHandler
+    {
+        protected override void Run(object dataItem)
+        {
+            var node = (InstrumentNode)dataItem;
+            Console.Write(node.Symbol);
+        }
+
+        protected override void Update (CommandInfo info)
+        {
+            info.Enabled = true;
+        }
+    }
+
+    public class DeleteInstrumentHandler: CommandHandler
+    {
+        protected override void Run(object dataItem)
+        {
+            var node = (InstrumentNode)dataItem;
+            Console.Write(node.Symbol);
+        }
+
+        protected override void Update (CommandInfo info)
+        {
+            info.Enabled = true;
+        }
+    }
 }

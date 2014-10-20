@@ -16,7 +16,7 @@
         <Condition id="ItemType" value="MonoDevelop.SmartQuant.SmartQuantProject">
             <Class class="MonoDevelop.SmartQuant.SmartQuantProjectServiceExtension" />
         </Condition>
-    </Extension>
+    </Extension>-->
     <Extension path="/MonoDevelop/Ide/ProjectTemplates">
         <ProjectTemplate id="SQInstrumentStrategyProject" resource="InstrumentStrategyProject.xpt.xml" />
         <ProjectTemplate id="SQStrategyProject" resource="StrategyProject.xpt.xml" />
@@ -35,13 +35,13 @@
         <Command id="MonoDevelop.SmartQuant.Commands.ImportCommands.ImportInstrumentList" defaultHandler="MonoDevelop.SmartQuant.Commands.ImportInstrumentListHandler" type="array" _label="" />
         <Command id="MonoDevelop.SmartQuant.Commands.ImportCommands.ImportHistoricalList" defaultHandler="MonoDevelop.SmartQuant.Commands.ImportHistoricalListHandler" type="array" _label="" />
         <Command id="MonoDevelop.SmartQuant.Commands.ImportCommands.ImportCsvOrTextFiles" _label="CSV or Text Files..." defaultHandler="MonoDevelop.SmartQuant.Commands.ImportCsvOrTextFileHandler" />
-    </Extension>-->
+    </Extension>
     <Extension path="/MonoDevelop/Ide/Commands">
-        <Command id="MequantaStudio.SmartQuant.Commands.AddNewInstrument" _label="Add New..." defaultHandler="MequantaStudio.SmartQuant.Commands.AddNewInstrumentHandler" />
-        <Command id="MequantaStudio.SmartQuant.Commands.OpenInstrumentData" _label="Data" defaultHandler="MequantaStudio.SmartQuant.Commands.OpenInstrumentDataHandler" />
-        <Command id="MequantaStudio.SmartQuant.Commands.DeleteInstrument" _label="Delete" defaultHandler="MequantaStudio.SmartQuant.Commands.DeleteInstrumentHandler" />
+        <Command id="MequantaStudio.SmartQuant.InstrumentNodeCommands.AddNew" _label="Add New..." defaultHandler="MequantaStudio.SmartQuant.InstrumentNodeCommandHandler" />
+        <Command id="MequantaStudio.SmartQuant.InstrumentNodeCommands.OpenData" _label="Data" defaultHandler="MequantaStudio.SmartQuant.InstrumentNodeCommandHandler" />
+        <Command id="MequantaStudio.SmartQuant.InstrumentNodeCommands.Delete" _label="Delete" defaultHandler="MequantaStudio.SmartQuant.InstrumentNodeCommandHandler" />
         <Command id="MequantaStudio.SmartQuant.Commands.ProviderConnect" _label="Connect" defaultHandler="MequantaStudio.SmartQuant.Commands.ProviderConnect" />
-        <Command id="MequantaStudio.SmartQuant.Commands.ProviderDisconnect" _label="Disconnect" defaultHandler="MequantaStudio.SmartQuant.Commands.ProviderDisconnect" />
+        <Command id="MequantaStudio.SmartQuant.Commands.ProviderDisconnect" _label="Disconnect" defaultHandler="MequantaStudio.SmartQuant.Commands.ProviderDisconnect" /> 
     </Extension>
     <Extension path="/MonoDevelop/Ide/Commands">
         <Category _name="SmartQuant" id="SmartQuant">
@@ -60,17 +60,7 @@
             <CommandItem id="MonoDevelop.SmartQuant.Commands.ShowStartPage" />
             <SeparatorItem id="DataManagerSeparator" />
             <CommandItem id="MonoDevelop.SmartQuant.Commands.ShowDataManager" />
-            <!--            <SeparatorItem id="ImportSeparator" />
-            <ItemSet id="Import" _label="Import">
-                <ItemSet id="ImportInstrument" _label="Instruments">
-                    <CommandItem id="MonoDevelop.SmartQuant.Commands.ImportCommands.ImportInstrumentList" />
-                </ItemSet>
-                <ItemSet id="ImportHistorical" _label="Historical">
-                    <CommandItem id="MonoDevelop.SmartQuant.Commands.ImportCommands.ImportHistoricalList" />
-                </ItemSet>
-                <SeparatorItem id="RecentSeparator" />
-                <CommandItem id="MonoDevelop.SmartQuant.Commands.ImportCommands.ImportCsvOrTextFiles" />
-            </ItemSet>-->
+
             <SeparatorItem id="TestSeparator" />
             <CommandItem id="MequantaStudio.SmartQuant.Commands.ShowXwtContentView" />
             <CommandItem id="MequantaStudio.SmartQuant.Commands.ShowGtkContentView" />
@@ -88,11 +78,11 @@
         <ExtensionNodeSet id="MonoDevelop.Components.Commands.ItemSet" />
     </ExtensionPoint>
     <Extension path="/MequantaStudio/SmartQuant/ContextMenu/InstrumentPad/InstrumentNode">
-        <CommandItem id="MequantaStudio.SmartQuant.Commands.AddNewInstrument" />
+        <CommandItem id="MequantaStudio.SmartQuant.InstrumentNodeCommands.AddNew" />
         <SeparatorItem />
-        <CommandItem id="MequantaStudio.SmartQuant.Commands.OpenInstrumentData" />
+        <CommandItem id="MequantaStudio.SmartQuant.InstrumentNodeCommands.OpenData" />
         <SeparatorItem />
-        <CommandItem id="MequantaStudio.SmartQuant.Commands.DeleteInstrumentData" />
+        <CommandItem id="MequantaStudio.SmartQuant.InstrumentNodeCommands.Delete" />
     </Extension>
     <ExtensionPoint path="/MequantaStudio/SmartQuant/ContextMenu/ProviderPad/ProviderNode">
         <ExtensionNodeSet id="MonoDevelop.Components.Commands.ItemSet" />
@@ -101,8 +91,7 @@
         <CommandItem id="MequantaStudio.SmartQuant.Commands.ProviderConnect" />
         <CommandItem id="MequantaStudio.SmartQuant.Commands.ProviderDisconnect" />
     </Extension>
-    <Extension path="/MonoDevelop/Ide/ContextMenu/ProjectPad">
-    </Extension>
+
     <Extension path="/MonoDevelop/Ide/Pads">
         <Category id="SmartQuant" _name="SmartQuant Windows">
             <SolutionPad id="InstrumentPad" class="MequantaStudio.SmartQuant.InstrumentPad" defaultLayout="SmartQuant" defaultPlacement="Left" _label="Instruments" icon="ms-sq-instrument">
@@ -119,22 +108,10 @@
     <Extension path="/MonoDevelop/DesignerSupport/PropertyProviders">
         <Class class="MequantaStudio.SmartQuant.InstrumentNodePropertyProvider" />
     </Extension>
-    <!--    <Extension path="/MonoDevelop/Ide/Pads/ProjectPad">
-        <NodeBuilder id="MonoDevelop.SmartQuant.ProjectNodeBuilderExtension" class="MonoDevelop.SmartQuant.ProjectNodeBuilderExtension" />
-    </Extension>-->
     <Extension path="/MonoDevelop/Ide/WorkbenchLayouts">
         <Layout id="SmartQuant" _name="SmartQuant" />
     </Extension>
-    <!--    <Extension path="/MonoDevelop/Ide/ContextMenu/ProjectPad">
-        <Condition id="ItemType" value="MonoDevelop.SmartQuant.SmartQuantProject">
-            <CommandItem id="MonoDevelop.SmartQuant.RunCommands.Start" />
-            <CommandItem id="MonoDevelop.SmartQuant.RunCommands.Stop" />
-        </Condition>
-        <Condition id="ItemType" value="IBuildTarget">
-            <SeparatorItem insertafter="MonoDevelop.Debugger.DebugCommands.DebugEntry" />
-            <CommandItem id="MonoDevelop.SmartQuant.RunCommands.Start" />
-        </Condition>
-    </Extension>-->
+
     <Extension path="/MonoDevelop/Core/StockIcons">
         <StockIcon stockid="ms-sq-instrument-group" icon="md-project|res:project-16.png" size="Menu" />
         <StockIcon stockid="ms-sq-instrument" icon="md-project|res:project-16.png" size="Menu" />
@@ -164,7 +141,7 @@
             <CommandItem id="MonoDevelop.SmartQuant.SimulationCommands.StepNext" />
         </ItemSet>
     </Extension>-->
-    <!--    <Extension path="/MonoDevelop/Ide/GlobalOptionsDialog/Projects">
-        <Section id="SmartQuant" _label="SmartQuant" icon="ms-sq-logo" fill="true" class="MonoDevelop.SmartQuant.OptionsPanel" />
-    </Extension>-->
+    <Extension path="/MonoDevelop/Ide/GlobalOptionsDialog/Projects">
+        <Section id="SmartQuant" _label="SmartQuant" icon="ms-sq-logo" fill="true" class="MequantaStudio.SmartQuant.OptionsPanel" />
+    </Extension>
 </ExtensionModel>

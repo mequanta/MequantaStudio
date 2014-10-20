@@ -52,10 +52,5 @@ namespace MequantaStudio.SmartQuant
             //            treeView.Model = model;
 //            Control.ShowAll();
 //        }
-
-//        public override Gtk.Widget Control
-//        {
-//            get { return treeView; }
-//        }
     }
 }

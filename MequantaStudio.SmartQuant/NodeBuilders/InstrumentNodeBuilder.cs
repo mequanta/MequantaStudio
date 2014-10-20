@@ -3,6 +3,7 @@ using MonoDevelop.Ide.Gui.Components;
 using System.Collections.Generic;
 using MonoDevelop.DesignerSupport;
 using MonoDevelop.Core;
+using MequantaStudio.SmartQuant.Commands;
 
 namespace MequantaStudio.SmartQuant
 {
@@ -40,7 +41,7 @@ namespace MequantaStudio.SmartQuant
         {
             get
             { 
-                return typeof(PropertyNodeCommandHandler);
+                return typeof(InstrumentNodeCommandHandler);
             }
         }
 
