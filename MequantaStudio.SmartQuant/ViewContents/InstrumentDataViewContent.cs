@@ -8,10 +8,18 @@ namespace MequantaStudio.SmartQuant
     {
         private InstrumentDataWidget widget;
 
-        public InstrumentDataViewContent(string label)
+        public override string TabPageLabel
         {
-            ContentName = label;
-            widget = new InstrumentDataWidget();
+            get
+            {
+                return string.Format("Data [{0}]", ContentName);
+            }
+        }
+
+        public InstrumentDataViewContent(string symbol)
+        {
+            ContentName = symbol;
+            widget = new InstrumentDataWidget(symbol);
             Control.ShowAll();
         }
 

@@ -4,7 +4,7 @@ using Gtk;
 
 namespace MonoDevelop.SmartQuant
 {
-    public class ImportHistoricalView : AbstractViewContent
+    public class ImportHistoricalDataView : AbstractViewContent
     {
         public override void Load(string fileName)
         {

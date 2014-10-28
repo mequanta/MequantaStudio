@@ -172,8 +172,8 @@ namespace MequantaStudio.SmartQuant
 			if ((this.Child != null)) {
 				this.Child.ShowAll ();
 			}
-			this.DefaultWidth = 225;
-			this.DefaultHeight = 188;
+			this.DefaultWidth = 222;
+			this.DefaultHeight = 177;
 			this.Show ();
 		}
 	}

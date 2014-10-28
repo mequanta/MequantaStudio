@@ -3,16 +3,17 @@ using MonoDevelop.Ide.Gui;
 using Gtk;
 using MonoDevelop.Core;
 
+
 namespace MequantaStudio.SmartQuant
 {
-    public class OrderManagerViewContent : NoProjectViewContent
+    public class GaplessChartViewContent: NoProjectViewContent
     {
-        private OrderManagerWidget widget;
+        private Button widget;
 
-        public OrderManagerViewContent()
+        public GaplessChartViewContent()
         {
-            ContentName = GettextCatalog.GetString("Order Manager");
-            widget = new OrderManagerWidget();
+            ContentName = GettextCatalog.GetString("Chart*");
+            widget = new Button(Gtk.Stock.MediaPlay);
             Control.ShowAll();
         }
 
@@ -22,10 +23,6 @@ namespace MequantaStudio.SmartQuant
             {
                 return widget;
             }
-        }
-
-        private void Update()
-        {
         }
     }
 }

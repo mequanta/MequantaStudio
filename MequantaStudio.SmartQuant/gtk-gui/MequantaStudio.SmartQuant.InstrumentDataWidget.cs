@@ -12,6 +12,8 @@ namespace MequantaStudio.SmartQuant
 		
 		private global::Gtk.Toolbar toolbar1;
 		
+		private global::Gtk.HScrollbar hscrollbar1;
+		
 		private global::Gtk.VPaned vpaned1;
 		
 		private global::Gtk.ScrolledWindow GtkScrolledWindow;
@@ -53,6 +55,18 @@ namespace MequantaStudio.SmartQuant
 			w3.Expand = false;
 			w3.Fill = false;
 			// Container child vbox2.Gtk.Box+BoxChild
+			this.hscrollbar1 = new global::Gtk.HScrollbar (null);
+			this.hscrollbar1.Name = "hscrollbar1";
+			this.hscrollbar1.Adjustment.Upper = 100D;
+			this.hscrollbar1.Adjustment.PageIncrement = 10D;
+			this.hscrollbar1.Adjustment.PageSize = 10D;
+			this.hscrollbar1.Adjustment.StepIncrement = 1D;
+			this.vbox2.Add (this.hscrollbar1);
+			global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.hscrollbar1]));
+			w4.Position = 1;
+			w4.Expand = false;
+			w4.Fill = false;
+			// Container child vbox2.Gtk.Box+BoxChild
 			this.vpaned1 = new global::Gtk.VPaned ();
 			this.vpaned1.CanFocus = true;
 			this.vpaned1.Name = "vpaned1";
@@ -67,8 +81,8 @@ namespace MequantaStudio.SmartQuant
 			this.dsTvw.Name = "dsTvw";
 			this.GtkScrolledWindow.Add (this.dsTvw);
 			this.vpaned1.Add (this.GtkScrolledWindow);
-			global::Gtk.Paned.PanedChild w5 = ((global::Gtk.Paned.PanedChild)(this.vpaned1 [this.GtkScrolledWindow]));
-			w5.Resize = false;
+			global::Gtk.Paned.PanedChild w6 = ((global::Gtk.Paned.PanedChild)(this.vpaned1 [this.GtkScrolledWindow]));
+			w6.Resize = false;
 			// Container child vpaned1.Gtk.Paned+PanedChild
 			this.notebook1 = new global::Gtk.Notebook ();
 			this.notebook1.CanFocus = true;
@@ -92,8 +106,8 @@ namespace MequantaStudio.SmartQuant
 			this.label3.ShowAll ();
 			this.vpaned1.Add (this.notebook1);
 			this.vbox2.Add (this.vpaned1);
-			global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.vpaned1]));
-			w9.Position = 1;
+			global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.vpaned1]));
+			w10.Position = 2;
 			this.Add (this.vbox2);
 			if ((this.Child != null)) {
 				this.Child.ShowAll ();

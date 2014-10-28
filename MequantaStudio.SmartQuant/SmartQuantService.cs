@@ -1,6 +1,9 @@
 ﻿using System;
 using SmartQuant;
 using System.Collections;
+using MonoDevelop.Core;
+using System.IO;
+using System.Runtime.InteropServices;
 
 namespace MequantaStudio.SmartQuant
 {
@@ -8,31 +11,33 @@ namespace MequantaStudio.SmartQuant
     {
         static SmartQuantService()
         {
-//            Framework framework = new Framework("mstudio", true);
-//            ProviderManager pmgr = framework.ProviderManager;
-//            //            pmgr.AddProvider(new IBTWS(framework));
-//            framework.EventLoggerManager.Add(new ConsoleEventLogger(framework));
+            string location = PropertyService.Get("MequantaStudio.SmartQuant.SmartQuantRuntimeLocation", "");
+            if (!string.IsNullOrEmpty(location) && Platform.IsWindows)
+            {
+                if (InitSmartQuantLibs(location))
+                    LoggingService.LogInfo("Found SmartQuant Runtime at {0}", location);
+            }
+
         }
 
-        public static object[] GetInstrumentRootNodes()
-        {
-            var folder = new InstrumentFolderNode("Instruments");
-            folder.Instruments.Add(new InstrumentNode("AAPL"));
-            folder.Instruments.Add(new InstrumentNode("AMD"));
-            return new object[] { folder };
+        [DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        static extern bool SetDllDirectory(string lpPathName);
+
+        static bool InitSmartQuantLibs(string path)
+        { 
+            try
+            {
+                return SetDllDirectory(path);
+            }
+            catch (EntryPointNotFoundException)
+            {
+            }
+            return false;
         }
 
-        public static object[] GetProviderRootNodes()
+        public static void PrintInfo()
         {
-            var nodes = new ArrayList();
-            var folder = new ProviderFolderNode(ProviderType.Execution);
-            folder.Providers.Add(new ProviderNode("TTDE"));
-            folder.Providers.Add(new ProviderNode("TWS"));
-            nodes.Add(folder);
-            nodes.Add(new ProviderFolderNode(ProviderType.HistoricalData));
-            nodes.Add(new ProviderFolderNode(ProviderType.Instrument));
-            nodes.Add(new ProviderFolderNode(ProviderType.MakretData));
-            return nodes.ToArray();
         }
     }
 }

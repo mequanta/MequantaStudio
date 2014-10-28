@@ -2,7 +2,7 @@
 using MonoDevelop.Components.Commands;
 using MonoDevelop.Ide;
 
-namespace MonoDevelop.SmartQuant.Commands
+namespace MonoDevelop.SmartQuant
 {
     public enum ImportCommands
     {

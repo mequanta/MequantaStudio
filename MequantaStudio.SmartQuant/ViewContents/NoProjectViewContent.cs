@@ -33,7 +33,6 @@ namespace MequantaStudio.SmartQuant
         public override void Load(string fileName)
         {
         }
-
     }
 }
 

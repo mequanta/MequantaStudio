@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MonoDevelop.SmartQuant
+namespace MequantaStudio.SmartQuant
 {
     [System.ComponentModel.ToolboxItem(true)]
     public partial class DataManagerWidget : Gtk.Bin

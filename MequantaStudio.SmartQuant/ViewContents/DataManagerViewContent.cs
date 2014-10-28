@@ -1,33 +1,27 @@
 ﻿using System;
 using MonoDevelop.Ide.Gui;
+using Gtk;
+using MonoDevelop.Core;
 
 namespace MequantaStudio.SmartQuant
 {
-    public class DataManagerViewContent: AbstractViewContent
+    public class DataManagerViewContent: NoProjectViewContent
     {
-        #region implemented abstract members of AbstractBaseViewContent
+        private DataManagerWidget widget;
 
-        public override Gtk.Widget Control
+        public override Widget Control
         {
             get
             {
-                throw new NotImplementedException();
+                return widget;
             }
         }
 
-        #endregion
-
-        #region implemented abstract members of AbstractViewContent
-
-        public override void Load(string fileName)
-        {
-            throw new NotImplementedException();
-        }
-
-        #endregion
-
         public DataManagerViewContent()
         {
+            ContentName = GettextCatalog.GetString("Data Manager");
+            widget = new DataManagerWidget();
+            Control.ShowAll();
         }
     }
 }

@@ -4,14 +4,14 @@ using System.Collections.Generic;
 
 namespace MequantaStudio.SmartQuant
 {
-
     public class ProviderNode
     {
         public string Name { get; private set; }
-
+        public bool Connected { get; private set; }
         public ProviderNode(string name)
         {
             Name = name;
+            Connected = false;
         }
     }
 
@@ -86,6 +86,13 @@ namespace MequantaStudio.SmartQuant
             }
         }
 
+        public override Type CommandHandlerType
+        {
+            get
+            { 
+                return typeof(ProviderCommandHandler);
+            }
+        }
         public override string GetNodeName(ITreeNavigator thisNode, object dataObject)
         {
             return ((ProviderNode)dataObject).Name;

@@ -8,7 +8,7 @@ namespace  MequantaStudio.SmartQuant
     public enum InstrumentNodeCommands
     {
         AddNew,
-        OpenData,
+        ViewData,
         Delete
     }
 
@@ -28,27 +28,27 @@ namespace  MequantaStudio.SmartQuant
             Console.WriteLine(instrument.Symbol);
         }
 
-        [CommandUpdateHandler(InstrumentNodeCommands.OpenData)]
+        [CommandUpdateHandler(InstrumentNodeCommands.ViewData)]
         public void UpdateOpenData(CommandInfo ci)
         {
             var instrument = CurrentNode.DataItem as InstrumentNode;
             ci.Visible = true;
         }
 
-        [CommandHandler(InstrumentNodeCommands.OpenData)]
+        [CommandHandler(InstrumentNodeCommands.ViewData)]
         public void OpenData()
         {
             var instrument = CurrentNode.DataItem as InstrumentNode;
-            string label = string.Format("Data [{0}]", instrument.Symbol);
+            string viewId = instrument.Symbol;
             foreach (var doc in IdeApp.Workbench.Documents)
             {
-                if (doc.Window.ViewContent.ContentName == label)
+                if (doc.Window.ViewContent.ContentName == viewId)
                 {
                     doc.Select();
                     return;
                 }
             }
-            IdeApp.Workbench.OpenDocument(new InstrumentDataViewContent(label), true);
+            IdeApp.Workbench.OpenDocument(new InstrumentDataViewContent(viewId), true);
         }
 
         [CommandUpdateHandler(InstrumentNodeCommands.Delete)]
