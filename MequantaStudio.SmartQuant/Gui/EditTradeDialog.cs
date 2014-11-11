@@ -6,7 +6,7 @@ namespace MequantaStudio.SmartQuant
     {
         public EditTradeDialog()
         {
-            this.Build();
+            Build();
         }
     }
 }

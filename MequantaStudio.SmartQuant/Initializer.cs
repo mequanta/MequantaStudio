@@ -7,8 +7,7 @@ namespace MequantaStudio.SmartQuant
     {
         protected override void Run()
         {
-            SmartQuantService.PrintInfo();
+            SmartQuantService.Init();
         }
     }
 }
-

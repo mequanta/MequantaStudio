@@ -6,7 +6,7 @@ namespace MequantaStudio.SmartQuant
     {
         public NewBarSeriesDialog()
         {
-            this.Build();
+            Build();
         }
     }
 }

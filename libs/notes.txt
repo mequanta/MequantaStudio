@@ -1,0 +1,1 @@
+HollyLibrary is recomplied for monodevelop 5.*

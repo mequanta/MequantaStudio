@@ -3,27 +3,18 @@ using MonoDevelop.Ide.Gui.Components;
 using System.Collections.Generic;
 using MonoDevelop.DesignerSupport;
 using MonoDevelop.Core;
-using MequantaStudio.SmartQuant.Commands;
+using MonoDevelop.Ide.Gui;
+using SmartQuant;
 
 namespace MequantaStudio.SmartQuant
 {
-    public enum InstrumentGroupMethod
-    {
-        Alphabetically,
-        ByCurrency,
-        ByExchange,
-        ByInstrumentType,
-        ByMaturity,
-        NoGroup
-    }
-
     public class InstrumentNode
     {
-        public string Symbol { get; set; }
+        public Instrument Instrument { get; private set; }
 
-        public InstrumentNode(string symbol)
+        public InstrumentNode(Instrument instrument)
         {
-            Symbol = symbol;
+            Instrument = instrument;
         }
     }
 
@@ -55,7 +46,7 @@ namespace MequantaStudio.SmartQuant
 
         public override string GetNodeName(ITreeNavigator thisNode, object dataObject)
         {
-            return ((InstrumentNode)dataObject).Symbol;
+            return ((InstrumentNode)dataObject).Instrument.Symbol;
         }
 
         public override bool HasChildNodes(ITreeBuilder builder, object dataObject)
@@ -66,7 +57,7 @@ namespace MequantaStudio.SmartQuant
         public override void BuildNode(ITreeBuilder treeBuilder, object dataObject, NodeInfo nodeInfo)
         {
             var node = dataObject as InstrumentNode;
-            nodeInfo.Label = node.Symbol;
+            nodeInfo.Label = node.Instrument.Symbol;
             nodeInfo.Icon = Context.GetIcon("ms-sq-instrument");
         }
     }
@@ -100,37 +91,9 @@ namespace MequantaStudio.SmartQuant
         {
             get
             {
-                return this.instrumentNode.Symbol;
+                return this.instrumentNode.Instrument.Symbol;
             }
         }
-
-        //        [LocalizedCategory ("Package")]
-        //        [LocalizedDisplayName ("Version")]
-        //        [LocalizedDescription ("Package version.")]
-        //        public SemanticVersion Version {
-        //            get { return packageReferenceNode.Version; }
-        //        }
-        //
-        //        [LocalizedCategory ("Package")]
-        //        [LocalizedDisplayName ("Development Dependency")]
-        //        [LocalizedDescription ("Package is a development dependency.")]
-        //        public bool IsDevelopmentDependency {
-        //            get { return packageReferenceNode.IsDevelopmentDependency; }
-        //        }
-        //
-        //        [LocalizedCategory ("Package")]
-        //        [LocalizedDisplayName ("Target Framework")]
-        //        [LocalizedDescription ("Target framework for the Package.")]
-        //        public FrameworkName TargetFramework {
-        //            get { return packageReferenceNode.TargetFramework; }
-        //        }
-        //
-        //        [LocalizedCategory ("Package")]
-        //        [LocalizedDisplayName ("Version Constraint")]
-        //        [LocalizedDescription ("Version constraint for the Package.")]
-        //        public IVersionSpec VersionConstraint {
-        //            get { return packageReferenceNode.VersionConstraint; }
-        //        }
     }
 
     public class InstrumentFolderNode
@@ -156,6 +119,14 @@ namespace MequantaStudio.SmartQuant
             }
         }
 
+        public override Type CommandHandlerType
+        {
+            get
+            { 
+                return typeof(InstrumentFolderNodeCommandHandler);
+            }
+        }
+
         public override string ContextMenuAddinPath
         {
             get
@@ -174,7 +145,8 @@ namespace MequantaStudio.SmartQuant
         {
             var folder = dataObject as InstrumentFolderNode;
             nodeInfo.Label = folder.Label;
-            nodeInfo.Icon = Context.GetIcon("ms-sq-instrument-group");
+            nodeInfo.Icon = Context.GetIcon(Stock.OpenFolder);
+            nodeInfo.ClosedIcon = Context.GetIcon(Stock.ClosedFolder);
         }
 
         public override void BuildChildNodes(ITreeBuilder builder, object dataObject)

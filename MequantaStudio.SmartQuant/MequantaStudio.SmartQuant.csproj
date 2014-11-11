@@ -8,6 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>MequantaStudio.SmartQuant</RootNamespace>
     <AssemblyName>MequantaStudio.SmartQuant</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -29,127 +30,82 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
-    <Reference Include="Mono.TextEditor">
-      <HintPath>..\..\monodevelop\main\build\bin\Mono.TextEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Cairo" />
-    <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-    <Reference Include="Xwt">
-      <HintPath>..\..\monodevelop\main\build\bin\Xwt.dll</HintPath>
-    </Reference>
-    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-    <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-    <Reference Include="pango-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="Mono.Posix" />
-    <Reference Include="Mono.Addins">
-      <HintPath>..\..\monodevelop\main\build\bin\Mono.Addins.dll</HintPath>
-    </Reference>
-    <Reference Include="SmartQuant">
-      <HintPath>C:\Program Files\SmartQuant Ltd\OpenQuant 2014\SmartQuant.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.NRefactory">
-      <HintPath>..\..\monodevelop\main\build\bin\ICSharpCode.NRefactory.dll</HintPath>
-    </Reference>
-    <Reference Include="MonoDevelop.DesignerSupport, Version=2.6.0.0, Culture=neutral">
-      <Package>C:\Program Files (x86)\Xamarin Studio\AddIns\MonoDevelop.DesignerSupport\MonoDevelop.DesignerSupport.dll</Package>
-    </Reference>
-    <Reference Include="MonoDevelop.Core, Version=2.6.0.0, Culture=neutral">
-      <Package>C:\Program Files (x86)\Xamarin Studio\bin\MonoDevelop.Core.dll</Package>
-    </Reference>
-    <Reference Include="MonoDevelop.Ide">
-      <HintPath>C:\Program Files %28x86%29\Xamarin Studio\bin\MonoDevelop.Ide.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Commands.cs" />
-    <Compile Include="SayHelloHandler.cs" />
-    <Compile Include="ExploreInstrumentsHandler.cs" />
-    <Compile Include="ChartCommandHandler.cs" />
-    <Compile Include="gtk-gui\generated.cs" />
-    <Compile Include="Commands\ImportCommands.cs" />
     <Compile Include="Initializer.cs" />
     <Compile Include="Pads\ProviderErrorListPad.cs" />
     <Compile Include="Pads\ProviderPad.cs" />
-    <Compile Include="NodeBuilders\ProviderNodeBuilder.cs" />
     <Compile Include="Pads\InstrumentPad.cs" />
-    <Compile Include="RunningService.cs" />
     <Compile Include="SmartQuantProject.cs" />
     <Compile Include="SmartQuantExecutionModeSet.cs" />
-    <Compile Include="NodeBuilders\ProjectNodeBuilderExtension.cs" />
     <Compile Include="SmartQuantProjectBinding.cs" />
     <Compile Include="SmartQuantProjectServiceExtension.cs" />
     <Compile Include="Pads\PortfolioPad.cs" />
     <Compile Include="NodeBuilders\PortfolioNodeBuilder.cs" />
     <Compile Include="Properties\AddinInfo.cs" />
-    <Compile Include="Commands\TestCommands.cs" />
-    <Compile Include="XwtView.cs" />
     <Compile Include="SmartQuantService.cs" />
     <Compile Include="SmartQuantExtensions.cs" />
     <Compile Include="NodeBuilders\InstrumentNodeBuilder.cs" />
     <Compile Include="PropertyNodeCommandHandler.cs" />
     <Compile Include="Gui\NewInstrumentDialog.cs" />
-    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.NewInstrumentDialog.cs" />
-    <Compile Include="ViewContents\AccountViewContent.cs" />
-    <Compile Include="ViewContents\OrderManagerViewContent.cs" />
-    <Compile Include="ViewContents\StrategyMonitorViewContent.cs" />
-    <Compile Include="ViewContents\QuoteMonitorViewContent.cs" />
-    <Compile Include="ViewContents\ChartViewContent.cs" />
-    <Compile Include="ViewContents\DataManagerViewContent.cs" />
-    <Compile Include="ViewContents\ImportInstrumentViewContent.cs" />
-    <Compile Include="ViewContents\ImportHistoricalDataViewContent.cs" />
-    <Compile Include="ViewContents\InstrumentDataViewContent.cs" />
-    <Compile Include="ViewContents\PortfolioViewContent.cs" />
     <Compile Include="Gui\AccountWidget.cs" />
-    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.AccountWidget.cs" />
     <Compile Include="Gui\EditTradeDialog.cs" />
-    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.EditTradeDialog.cs" />
     <Compile Include="Gui\CompressBarDialog.cs" />
-    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.CompressBarDialog.cs" />
     <Compile Include="Gui\AddOrEditBidDialog.cs" />
-    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.AddOrEditBidDialog.cs" />
     <Compile Include="Gui\NewBarSeriesDialog.cs" />
-    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.NewBarSeriesDialog.cs" />
     <Compile Include="Gui\InstrumentDataWidget.cs" />
-    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.InstrumentDataWidget.cs" />
     <Compile Include="Gui\OrderManagerWidget.cs" />
-    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.OrderManagerWidget.cs" />
     <Compile Include="Gui\PortfolioWidget.cs" />
-    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.PortfolioWidget.cs" />
-    <Compile Include="ViewContents\NoProjectViewContent.cs" />
     <Compile Include="Commands\ProviderCommands.cs" />
     <Compile Include="Gui\OptionsPanel.cs" />
-    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.OptionsPanelWidget.cs" />
     <Compile Include="Commands\PortfolioCommands.cs" />
     <Compile Include="Commands\InstrumentCommands.cs" />
     <Compile Include="Gui\AddPortfolioDialog.cs" />
-    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.AddPortfolioDialog.cs" />
     <Compile Include="Pads\StrategyPad.cs" />
-    <Compile Include="Commands\AccountCommands.cs" />
-    <Compile Include="ViewContents\GaplessChartViewContent.cs" />
     <Compile Include="Gui\DataManagerWidget.cs" />
-    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.DataManagerWidget.cs" />
     <Compile Include="Gui\QuoteMonitorWidget.cs" />
     <Compile Include="Gui\ImportInstrumentWidget.cs" />
     <Compile Include="Gui\ImportHistoricalDataWidget.cs" />
-    <Compile Include="ViewContents\ImportHistoricalDataView.cs" />
     <Compile Include="Gui\StrategyMonitorWidget.cs" />
+    <Compile Include="ViewContents\ViewOnlyViewContent.cs" />
+    <Compile Include="WorkbenchExtensions.cs" />
+    <Compile Include="SmartQuant.Controls\Data\DataSeriesViewer.cs" />
+    <Compile Include="Commands\OtherCommands.cs" />
+    <Compile Include="gtk-gui\generated.cs" />
     <Compile Include="gtk-gui\MequantaStudio.SmartQuant.ImportInstrumentWidget.cs" />
     <Compile Include="gtk-gui\MequantaStudio.SmartQuant.ImportHistoricalDataWidget.cs" />
     <Compile Include="gtk-gui\MequantaStudio.SmartQuant.QuoteMonitorWidget.cs" />
     <Compile Include="gtk-gui\MequantaStudio.SmartQuant.StrategyMonitorWidget.cs" />
+    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.DataManagerWidget.cs" />
+    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.OptionsPanelWidget.cs" />
+    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.NewInstrumentDialog.cs" />
+    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.AccountWidget.cs" />
+    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.EditTradeDialog.cs" />
+    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.CompressBarDialog.cs" />
+    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.AddOrEditBidDialog.cs" />
+    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.NewBarSeriesDialog.cs" />
+    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.InstrumentDataWidget.cs" />
+    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.OrderManagerWidget.cs" />
+    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.PortfolioWidget.cs" />
+    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.AddPortfolioDialog.cs" />
+    <Compile Include="Gui\ComboBox\SimpleComboBox.cs" />
+    <Compile Include="SmartQuantUtils.cs" />
+    <Compile Include="Gui\ImportWizardStep1Widget.cs" />
+    <Compile Include="Gui\ImportWizardStep2Widget.cs" />
+    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.ImportWizardStep1Widget.cs" />
+    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.ImportWizardStep2Widget.cs" />
+    <Compile Include="Gui\ImportWizardStep3Widget.cs" />
+    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.ImportWizardStep3Widget.cs" />
+    <Compile Include="Gui\ImportWizard.cs" />
+    <Compile Include="DataLoader.cs" />
+    <Compile Include="SolutionRunner.cs" />
+    <Compile Include="Gui\ExportDataSeriesDialog.cs" />
+    <Compile Include="gtk-gui\MequantaStudio.SmartQuant.ExportDataSeriesDialog.cs" />
+    <Compile Include="Gui\DataSeriesTreeView.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Manifest.addin.xml">
       <LogicalName>Manifest.addin.xml</LogicalName>
-    </EmbeddedResource>
-    <EmbeddedResource Include="gtk-gui\gui.stetic">
-      <LogicalName>gui.stetic</LogicalName>
+      <DeployService-Deploy>True</DeployService-Deploy>
+      <Gettext-ScanForTranslations>False</Gettext-ScanForTranslations>
     </EmbeddedResource>
     <EmbeddedResource Include="Icons\broker_info.png">
       <LogicalName>broker_info.png</LogicalName>
@@ -301,8 +257,12 @@
     <EmbeddedResource Include="Icons\project-16.png">
       <LogicalName>project-16.png</LogicalName>
     </EmbeddedResource>
+    <EmbeddedResource Include="gtk-gui\gui.stetic">
+      <LogicalName>gui.stetic</LogicalName>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MonoDevelop.Addins.0.1.4\build\net40\MonoDevelop.Addins.targets" Condition="Exists('..\packages\MonoDevelop.Addins.0.1.4\build\net40\MonoDevelop.Addins.targets')" />
   <ItemGroup>
     <Folder Include="Icons\" />
     <Folder Include="Templates\" />
@@ -311,10 +271,74 @@
     <Folder Include="NodeBuilders\" />
     <Folder Include="Pads\" />
     <Folder Include="ViewContents\" />
+    <Folder Include="SmartQuant.Controls\" />
+    <Folder Include="SmartQuant.Controls\Data\" />
+    <Folder Include="Gui\ComboBox\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="monodoc.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="Mono.Posix, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
+    <Reference Include="MonoDevelop.Ide, Version=2.6.0.0, Culture=neutral">
+      <Package>C:\Program Files (x86)\Xamarin Studio\bin\MonoDevelop.Ide.dll</Package>
+    </Reference>
+    <Reference Include="MonoDevelop.Core, Version=2.6.0.0, Culture=neutral">
+      <Package>C:\Program Files (x86)\Xamarin Studio\bin\MonoDevelop.Core.dll</Package>
+    </Reference>
+    <Reference Include="MonoDevelop.DesignerSupport, Version=2.6.0.0, Culture=neutral">
+      <Package>C:\Program Files (x86)\Xamarin Studio\AddIns\MonoDevelop.DesignerSupport\MonoDevelop.DesignerSupport.dll</Package>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System" />
+    <Reference Include="Mono.Addins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+      <Package>C:\Program Files (x86)\Xamarin Studio\bin\Mono.Addins.dll</Package>
+    </Reference>
+    <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="pango-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="SmartQuant">
+      <HintPath>C:\Program Files\SmartQuant Ltd\OpenQuant 2014\SmartQuant.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.NRefactory, Version=5.0.0.0, Culture=neutral, PublicKeyToken=d4bfe873e7598c49">
+      <Package>C:\Program Files (x86)\Xamarin Studio\bin\ICSharpCode.NRefactory.dll</Package>
+    </Reference>
+    <Reference Include="Xwt, Version=0.1.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+      <Package>C:\Program Files (x86)\Xamarin Studio\bin\Xwt.dll</Package>
+    </Reference>
+    <Reference Include="Xwt.Gtk, Version=0.1.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+      <Package>C:\Program Files (x86)\Xamarin Studio\bin\Xwt.Gtk.dll</Package>
+    </Reference>
+    <Reference Include="HollyLibrary">
+      <HintPath>..\libs\HollyLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SQCharts\SmartQuant.Charting.Gtk\SmartQuant.Charting.Gtk.csproj">
+      <Project>{CB9A2ED5-FDF9-40F4-8C68-3BD763BE90C1}</Project>
+      <Name>SmartQuant.Charting.Gtk</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SQCharts\Compatibility.Gtk\Compatibility.Gtk.csproj">
+      <Project>{83CE5610-A15C-488C-8D9F-909C2340107E}</Project>
+      <Name>Compatibility.Gtk</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SQCharts\SmartQuant.ChartViewers.Gtk\SmartQuant.ChartViewers.Gtk.csproj">
+      <Project>{470E0CC8-20D6-496E-A84F-3E8A5F454F1C}</Project>
+      <Name>SmartQuant.ChartViewers.Gtk</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SQCharts\SmartQuant.Controls.Gtk\SmartQuant.Controls.Gtk.csproj">
+      <Project>{26692FBA-DC22-41DA-838A-7DF6D1420637}</Project>
+      <Name>SmartQuant.Controls.Gtk</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SQCharts\SmartQuant.FinChart.Gtk\SmartQuant.FinChart.Gtk.csproj">
+      <Project>{B650BE79-F2BA-4905-AE3A-1D35D125B7CE}</Project>
+      <Name>SmartQuant.FinChart.Gtk</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

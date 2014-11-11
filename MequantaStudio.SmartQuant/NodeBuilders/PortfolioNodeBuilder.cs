@@ -13,7 +13,6 @@ namespace MequantaStudio.SmartQuant
 
         public List<PortfolioNode> Children { get; private set; }
 
-
         public PortfolioNode(Portfolio portfolio)
         {
             Portfolio = portfolio;
@@ -106,4 +105,3 @@ namespace MequantaStudio.SmartQuant
         }
     }
 }
-
