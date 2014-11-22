@@ -1,9 +1,8 @@
 ﻿using System;
 using Gtk;
-using MequantaStudio.SmartQuant;
 using SmartQuant;
 
-namespace TestDataSeriesTreeView
+namespace QuoteMonitorDemo
 {
     public partial class MainWindow : Window
     {
@@ -12,10 +11,10 @@ namespace TestDataSeriesTreeView
         {
             var f = Framework.Current;
             var ds = f.DataManager.GetDataSeriesList()[0];
-            var view = new DataSeriesTreeView(ds);
+            var view = new MequantaStudio.SmartQuant.QuoteMonitorWidget("Data Simulator");
             Add(view);
             SetDefaultSize(400, 300);
-            ShowAll();
+            Title = view.Name;
             DeleteEvent += (sender, e) =>
             {
                 Application.Quit();

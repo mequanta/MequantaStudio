@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{62B40836-4228-49B0-8CDE-A46B196C4617}</ProjectGuid>
+    <ProjectGuid>{00B21F09-0B36-4D1E-9F5C-A290A5DE0EB7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>TestSolutionRunner</RootNamespace>
-    <AssemblyName>TestSolutionRunner</AssemblyName>
+    <RootNamespace>QuoteMonitorDemo</RootNamespace>
+    <AssemblyName>QuoteMonitorDemo</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -17,7 +17,6 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
@@ -55,27 +54,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="gtk-gui\gui.stetic">
-      <LogicalName>gui.stetic</LogicalName>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="gtk-gui\generated.cs" />
-    <Compile Include="MainWindow.cs" />
-    <Compile Include="gtk-gui\MainWindow.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\..\MequantaStudio.SmartQuant\Gui\QuoteMonitorWidget.cs">
+      <Link>QuoteMonitorWidget.cs</Link>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <None Include="BollingerBands.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Mequanta.SmartQuant\Mequanta.SmartQuant.csproj">
-      <Project>{5CAB5624-3761-4177-991F-DDF3D8FE0C89}</Project>
-      <Name>Mequanta.SmartQuant</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>

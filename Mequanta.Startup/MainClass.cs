@@ -2,7 +2,7 @@
 using MonoDevelop.Ide.Extensions;
 using System;
 
-namespace MeQuanta.Startup
+namespace Mequanta.Startup
 {
 	class MainClass
 	{

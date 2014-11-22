@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mequanta.Startup", "Mequanta.Startup\Mequanta.Startup.csproj", "{6F05E8A8-6783-4B99-A608-48B2D3CDE9A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MequantaStudio.SmartQuant", "MequantaStudio.SmartQuant\MequantaStudio.SmartQuant.csproj", "{5CAB5624-3761-4177-991F-DDF3D8FE0C89}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mequanta.SmartQuant", "Mequanta.SmartQuant\Mequanta.SmartQuant.csproj", "{5CAB5624-3761-4177-991F-DDF3D8FE0C89}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compatibility.Gtk", "..\SQCharts\Compatibility.Gtk\Compatibility.Gtk.csproj", "{83CE5610-A15C-488C-8D9F-909C2340107E}"
 EndProject
@@ -23,12 +23,26 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDataSeriesTreeView", "T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCombo", "Tests\TestCombo\TestCombo.csproj", "{F1537926-1E2A-4C1A-B55D-1FD541F85F7B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuoteMonitorDemo", "Tests\QuoteMonitorDemo\QuoteMonitorDemo.csproj", "{00B21F09-0B36-4D1E-9F5C-A290A5DE0EB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyMonitorDemo", "Tests\StrategyMonitorDemo\StrategyMonitorDemo.csproj", "{936FB1E2-5204-4CA1-B524-6070C49502BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataManagerDemo", "Tests\DataManagerDemo\DataManagerDemo.csproj", "{94967241-74DC-4DB9-BD8D-5E9B314B8881}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportWizardDemo", "Tests\ImportWizardDemo\ImportWizardDemo.csproj", "{CC41FDBB-7892-4247-BF8E-EBDBE4FDBCD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mequanta.Components.Ide", "Mequanta.Components.Ide\Mequanta.Components.Ide.csproj", "{B365C1AF-DAD8-4914-919E-5D81FA2BB49D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00B21F09-0B36-4D1E-9F5C-A290A5DE0EB7}.Debug|x86.ActiveCfg = Debug|x86
+		{00B21F09-0B36-4D1E-9F5C-A290A5DE0EB7}.Debug|x86.Build.0 = Debug|x86
+		{00B21F09-0B36-4D1E-9F5C-A290A5DE0EB7}.Release|x86.ActiveCfg = Release|x86
+		{00B21F09-0B36-4D1E-9F5C-A290A5DE0EB7}.Release|x86.Build.0 = Release|x86
 		{26692FBA-DC22-41DA-838A-7DF6D1420637}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{26692FBA-DC22-41DA-838A-7DF6D1420637}.Debug|x86.Build.0 = Debug|Any CPU
 		{26692FBA-DC22-41DA-838A-7DF6D1420637}.Release|x86.ActiveCfg = Release|Any CPU
@@ -53,10 +67,22 @@ Global
 		{83CE5610-A15C-488C-8D9F-909C2340107E}.Debug|x86.Build.0 = Debug|Any CPU
 		{83CE5610-A15C-488C-8D9F-909C2340107E}.Release|x86.ActiveCfg = Release|Any CPU
 		{83CE5610-A15C-488C-8D9F-909C2340107E}.Release|x86.Build.0 = Release|Any CPU
+		{936FB1E2-5204-4CA1-B524-6070C49502BD}.Debug|x86.ActiveCfg = Debug|x86
+		{936FB1E2-5204-4CA1-B524-6070C49502BD}.Debug|x86.Build.0 = Debug|x86
+		{936FB1E2-5204-4CA1-B524-6070C49502BD}.Release|x86.ActiveCfg = Release|x86
+		{936FB1E2-5204-4CA1-B524-6070C49502BD}.Release|x86.Build.0 = Release|x86
+		{94967241-74DC-4DB9-BD8D-5E9B314B8881}.Debug|x86.ActiveCfg = Debug|x86
+		{94967241-74DC-4DB9-BD8D-5E9B314B8881}.Debug|x86.Build.0 = Debug|x86
+		{94967241-74DC-4DB9-BD8D-5E9B314B8881}.Release|x86.ActiveCfg = Release|x86
+		{94967241-74DC-4DB9-BD8D-5E9B314B8881}.Release|x86.Build.0 = Release|x86
 		{9FCAA43F-193B-445E-9967-F3C0F3102DAD}.Debug|x86.ActiveCfg = Debug|x86
 		{9FCAA43F-193B-445E-9967-F3C0F3102DAD}.Debug|x86.Build.0 = Debug|x86
 		{9FCAA43F-193B-445E-9967-F3C0F3102DAD}.Release|x86.ActiveCfg = Release|x86
 		{9FCAA43F-193B-445E-9967-F3C0F3102DAD}.Release|x86.Build.0 = Release|x86
+		{B365C1AF-DAD8-4914-919E-5D81FA2BB49D}.Debug|x86.ActiveCfg = Debug|x86
+		{B365C1AF-DAD8-4914-919E-5D81FA2BB49D}.Debug|x86.Build.0 = Debug|x86
+		{B365C1AF-DAD8-4914-919E-5D81FA2BB49D}.Release|x86.ActiveCfg = Release|x86
+		{B365C1AF-DAD8-4914-919E-5D81FA2BB49D}.Release|x86.Build.0 = Release|x86
 		{B650BE79-F2BA-4905-AE3A-1D35D125B7CE}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{B650BE79-F2BA-4905-AE3A-1D35D125B7CE}.Debug|x86.Build.0 = Debug|Any CPU
 		{B650BE79-F2BA-4905-AE3A-1D35D125B7CE}.Release|x86.ActiveCfg = Release|Any CPU
@@ -65,6 +91,10 @@ Global
 		{CB9A2ED5-FDF9-40F4-8C68-3BD763BE90C1}.Debug|x86.Build.0 = Debug|Any CPU
 		{CB9A2ED5-FDF9-40F4-8C68-3BD763BE90C1}.Release|x86.ActiveCfg = Release|Any CPU
 		{CB9A2ED5-FDF9-40F4-8C68-3BD763BE90C1}.Release|x86.Build.0 = Release|Any CPU
+		{CC41FDBB-7892-4247-BF8E-EBDBE4FDBCD8}.Debug|x86.ActiveCfg = Debug|x86
+		{CC41FDBB-7892-4247-BF8E-EBDBE4FDBCD8}.Debug|x86.Build.0 = Debug|x86
+		{CC41FDBB-7892-4247-BF8E-EBDBE4FDBCD8}.Release|x86.ActiveCfg = Release|x86
+		{CC41FDBB-7892-4247-BF8E-EBDBE4FDBCD8}.Release|x86.Build.0 = Release|x86
 		{F1537926-1E2A-4C1A-B55D-1FD541F85F7B}.Debug|x86.ActiveCfg = Debug|x86
 		{F1537926-1E2A-4C1A-B55D-1FD541F85F7B}.Debug|x86.Build.0 = Debug|x86
 		{F1537926-1E2A-4C1A-B55D-1FD541F85F7B}.Release|x86.ActiveCfg = Release|x86
@@ -74,6 +104,10 @@ Global
 		{62B40836-4228-49B0-8CDE-A46B196C4617} = {B5394605-E8BF-4001-B70E-D715EFB17FE7}
 		{9FCAA43F-193B-445E-9967-F3C0F3102DAD} = {B5394605-E8BF-4001-B70E-D715EFB17FE7}
 		{F1537926-1E2A-4C1A-B55D-1FD541F85F7B} = {B5394605-E8BF-4001-B70E-D715EFB17FE7}
+		{00B21F09-0B36-4D1E-9F5C-A290A5DE0EB7} = {B5394605-E8BF-4001-B70E-D715EFB17FE7}
+		{936FB1E2-5204-4CA1-B524-6070C49502BD} = {B5394605-E8BF-4001-B70E-D715EFB17FE7}
+		{94967241-74DC-4DB9-BD8D-5E9B314B8881} = {B5394605-E8BF-4001-B70E-D715EFB17FE7}
+		{CC41FDBB-7892-4247-BF8E-EBDBE4FDBCD8} = {B5394605-E8BF-4001-B70E-D715EFB17FE7}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Mequanta.Startup\Mequanta.Startup.csproj
