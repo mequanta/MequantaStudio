@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImportWizardDemo", "Tests\I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mequanta.Components.Ide", "Mequanta.Components.Ide\Mequanta.Components.Ide.csproj", "{B365C1AF-DAD8-4914-919E-5D81FA2BB49D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartQuant", "..\SmartQuant.dll\src\SmartQuant\SmartQuant.csproj", "{4A09B376-7AFA-40CE-AFBD-448984BC4514}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -51,6 +53,10 @@ Global
 		{470E0CC8-20D6-496E-A84F-3E8A5F454F1C}.Debug|x86.Build.0 = Debug|Any CPU
 		{470E0CC8-20D6-496E-A84F-3E8A5F454F1C}.Release|x86.ActiveCfg = Release|Any CPU
 		{470E0CC8-20D6-496E-A84F-3E8A5F454F1C}.Release|x86.Build.0 = Release|Any CPU
+		{4A09B376-7AFA-40CE-AFBD-448984BC4514}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4A09B376-7AFA-40CE-AFBD-448984BC4514}.Debug|x86.Build.0 = Debug|Any CPU
+		{4A09B376-7AFA-40CE-AFBD-448984BC4514}.Release|x86.ActiveCfg = Release|Any CPU
+		{4A09B376-7AFA-40CE-AFBD-448984BC4514}.Release|x86.Build.0 = Release|Any CPU
 		{5CAB5624-3761-4177-991F-DDF3D8FE0C89}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{5CAB5624-3761-4177-991F-DDF3D8FE0C89}.Debug|x86.Build.0 = Debug|Any CPU
 		{5CAB5624-3761-4177-991F-DDF3D8FE0C89}.Release|x86.ActiveCfg = Release|Any CPU

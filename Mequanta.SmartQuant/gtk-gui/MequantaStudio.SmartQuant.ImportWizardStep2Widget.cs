@@ -210,11 +210,11 @@ namespace MequantaStudio.SmartQuant
 			this.hbox4.Name = "hbox4";
 			this.hbox4.Spacing = 6;
 			// Container child hbox4.Gtk.Box+BoxChild
-			this.spinbutton1 = new global::Gtk.SpinButton (0D, 100D, 1D);
+			this.spinbutton1 = new global::Gtk.SpinButton (0, 100, 1);
 			this.spinbutton1.CanFocus = true;
 			this.spinbutton1.Name = "spinbutton1";
-			this.spinbutton1.Adjustment.PageIncrement = 10D;
-			this.spinbutton1.ClimbRate = 1D;
+			this.spinbutton1.Adjustment.PageIncrement = 10;
+			this.spinbutton1.ClimbRate = 1;
 			this.spinbutton1.Numeric = true;
 			this.hbox4.Add (this.spinbutton1);
 			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.hbox4 [this.spinbutton1]));
@@ -333,11 +333,11 @@ namespace MequantaStudio.SmartQuant
 			w15.XOptions = ((global::Gtk.AttachOptions)(4));
 			w15.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table3.Gtk.Table+TableChild
-			this.spinbutton2 = new global::Gtk.SpinButton (0D, 100D, 1D);
+			this.spinbutton2 = new global::Gtk.SpinButton (0, 100, 1);
 			this.spinbutton2.CanFocus = true;
 			this.spinbutton2.Name = "spinbutton2";
-			this.spinbutton2.Adjustment.PageIncrement = 10D;
-			this.spinbutton2.ClimbRate = 1D;
+			this.spinbutton2.Adjustment.PageIncrement = 10;
+			this.spinbutton2.ClimbRate = 1;
 			this.spinbutton2.Numeric = true;
 			this.table3.Add (this.spinbutton2);
 			global::Gtk.Table.TableChild w16 = ((global::Gtk.Table.TableChild)(this.table3 [this.spinbutton2]));

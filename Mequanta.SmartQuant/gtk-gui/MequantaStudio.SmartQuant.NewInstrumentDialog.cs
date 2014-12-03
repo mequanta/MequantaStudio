@@ -231,11 +231,11 @@ namespace MequantaStudio.SmartQuant
 			w17.XOptions = ((global::Gtk.AttachOptions)(4));
 			w17.YOptions = ((global::Gtk.AttachOptions)(0));
 			// Container child tblOption.Gtk.Table+TableChild
-			this.sbnStrike = new global::Gtk.SpinButton (0D, 100D, 1D);
+			this.sbnStrike = new global::Gtk.SpinButton (0, 100, 1);
 			this.sbnStrike.CanFocus = true;
 			this.sbnStrike.Name = "sbnStrike";
-			this.sbnStrike.Adjustment.PageIncrement = 10D;
-			this.sbnStrike.ClimbRate = 1D;
+			this.sbnStrike.Adjustment.PageIncrement = 10;
+			this.sbnStrike.ClimbRate = 1;
 			this.sbnStrike.Digits = ((uint)(4));
 			this.sbnStrike.Numeric = true;
 			this.tblOption.Add (this.sbnStrike);

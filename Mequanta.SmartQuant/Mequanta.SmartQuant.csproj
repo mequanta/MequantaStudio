@@ -286,39 +286,18 @@
   <ItemGroup>
     <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-    <Reference Include="Mono.Posix, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
-    <Reference Include="MonoDevelop.Ide, Version=2.6.0.0, Culture=neutral">
-      <Package>C:\Program Files (x86)\Xamarin Studio\bin\MonoDevelop.Ide.dll</Package>
-    </Reference>
-    <Reference Include="MonoDevelop.Core, Version=2.6.0.0, Culture=neutral">
-      <Package>C:\Program Files (x86)\Xamarin Studio\bin\MonoDevelop.Core.dll</Package>
-    </Reference>
-    <Reference Include="MonoDevelop.DesignerSupport, Version=2.6.0.0, Culture=neutral">
-      <Package>C:\Program Files (x86)\Xamarin Studio\AddIns\MonoDevelop.DesignerSupport\MonoDevelop.DesignerSupport.dll</Package>
-    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System" />
-    <Reference Include="Mono.Addins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
-      <Package>C:\Program Files (x86)\Xamarin Studio\bin\Mono.Addins.dll</Package>
-    </Reference>
     <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="pango-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-    <Reference Include="SmartQuant">
-      <HintPath>C:\Program Files\SmartQuant Ltd\OpenQuant 2014\SmartQuant.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.NRefactory, Version=5.0.0.0, Culture=neutral, PublicKeyToken=d4bfe873e7598c49">
-      <Package>C:\Program Files (x86)\Xamarin Studio\bin\ICSharpCode.NRefactory.dll</Package>
-    </Reference>
-    <Reference Include="Xwt, Version=0.1.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
-      <Package>C:\Program Files (x86)\Xamarin Studio\bin\Xwt.dll</Package>
-    </Reference>
-    <Reference Include="Xwt.Gtk, Version=0.1.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
-      <Package>C:\Program Files (x86)\Xamarin Studio\bin\Xwt.Gtk.dll</Package>
-    </Reference>
     <Reference Include="HollyLibrary">
       <HintPath>..\libs\HollyLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Posix" />
+    <Reference Include="Xwt">
+      <HintPath>..\..\monodevelop\main\external\xwt\Xwt\bin\Debug\Xwt.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -346,5 +325,12 @@
       <Project>{B365C1AF-DAD8-4914-919E-5D81FA2BB49D}</Project>
       <Name>Mequanta.Components.Ide</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\SmartQuant.dll\src\SmartQuant\SmartQuant.csproj">
+      <Project>{4A09B376-7AFA-40CE-AFBD-448984BC4514}</Project>
+      <Name>SmartQuant</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AddinReference Include="MonoDevelop.DesignerSupport" />
   </ItemGroup>
 </Project>

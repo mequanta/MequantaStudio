@@ -42,8 +42,7 @@ namespace MequantaStudio.SmartQuant
 			this.vbox2.Name = "vbox2";
 			this.vbox2.Spacing = 6;
 			// Container child vbox2.Gtk.Box+BoxChild
-			this.UIManager.AddUiFromString ("<ui><toolbar name=\'toolbar1\'><toolitem name=\'refreshAction\' action=\'refreshAction" +
-			"\'/></toolbar></ui>");
+			this.UIManager.AddUiFromString ("<ui><toolbar name='toolbar1'><toolitem name='refreshAction' action='refreshAction'/></toolbar></ui>");
 			this.toolbar1 = ((global::Gtk.Toolbar)(this.UIManager.GetWidget ("/toolbar1")));
 			this.toolbar1.Name = "toolbar1";
 			this.toolbar1.ShowArrow = false;

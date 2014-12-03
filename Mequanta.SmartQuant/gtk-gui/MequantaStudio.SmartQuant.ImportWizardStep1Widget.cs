@@ -91,8 +91,7 @@ namespace MequantaStudio.SmartQuant
 			// Container child vbox1.Gtk.Box+BoxChild
 			this.label1 = new global::Gtk.Label ();
 			this.label1.Name = "label1";
-			this.label1.LabelProp = global::Mono.Unix.Catalog.GetString ("Note:\nIf you selection more \nthan one file make \nsure that all files have \nthe sa" +
-			"me format!");
+			this.label1.LabelProp = global::Mono.Unix.Catalog.GetString ("Note:\nIf you selection more \nthan one file make \nsure that all files have \nthe same format!");
 			this.label1.Wrap = true;
 			this.vbox1.Add (this.label1);
 			global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.label1]));

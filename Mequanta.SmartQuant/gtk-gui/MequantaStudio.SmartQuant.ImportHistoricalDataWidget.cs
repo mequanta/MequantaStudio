@@ -72,7 +72,7 @@ namespace MequantaStudio.SmartQuant
 			this.vbox4.Name = "vbox4";
 			this.vbox4.Spacing = 6;
 			// Container child vbox4.Gtk.Box+BoxChild
-			this.UIManager.AddUiFromString (@"<ui><toolbar name='toolbar3'><toolitem name='addAction' action='addAction'/><toolitem name='deleteAction' action='deleteAction'/><separator/><toolitem name='mediaPlayAction' action='mediaPlayAction'/><toolitem name='mediaStopAction' action='mediaStopAction'/></toolbar></ui>");
+			this.UIManager.AddUiFromString ("<ui><toolbar name='toolbar3'><toolitem name='addAction' action='addAction'/><toolitem name='deleteAction' action='deleteAction'/><separator/><toolitem name='mediaPlayAction' action='mediaPlayAction'/><toolitem name='mediaStopAction' action='mediaStopAction'/></toolbar></ui>");
 			this.toolbar3 = ((global::Gtk.Toolbar)(this.UIManager.GetWidget ("/toolbar3")));
 			this.toolbar3.Name = "toolbar3";
 			this.toolbar3.ShowArrow = false;
@@ -126,11 +126,11 @@ namespace MequantaStudio.SmartQuant
 			w6.BottomAttach = ((uint)(2));
 			w6.XOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table1.Gtk.Table+TableChild
-			this.spinbutton1 = new global::Gtk.SpinButton (0D, 100D, 1D);
+			this.spinbutton1 = new global::Gtk.SpinButton (0, 100, 1);
 			this.spinbutton1.CanFocus = true;
 			this.spinbutton1.Name = "spinbutton1";
-			this.spinbutton1.Adjustment.PageIncrement = 10D;
-			this.spinbutton1.ClimbRate = 1D;
+			this.spinbutton1.Adjustment.PageIncrement = 10;
+			this.spinbutton1.ClimbRate = 1;
 			this.spinbutton1.Numeric = true;
 			this.table1.Add (this.spinbutton1);
 			global::Gtk.Table.TableChild w7 = ((global::Gtk.Table.TableChild)(this.table1 [this.spinbutton1]));

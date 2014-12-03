@@ -60,11 +60,11 @@ namespace MequantaStudio.SmartQuant
 			w4.XOptions = ((global::Gtk.AttachOptions)(4));
 			w4.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table1.Gtk.Table+TableChild
-			this.spinbutton1 = new global::Gtk.SpinButton (0D, 100D, 1D);
+			this.spinbutton1 = new global::Gtk.SpinButton (0, 100, 1);
 			this.spinbutton1.CanFocus = true;
 			this.spinbutton1.Name = "spinbutton1";
-			this.spinbutton1.Adjustment.PageIncrement = 10D;
-			this.spinbutton1.ClimbRate = 1D;
+			this.spinbutton1.Adjustment.PageIncrement = 10;
+			this.spinbutton1.ClimbRate = 1;
 			this.spinbutton1.Numeric = true;
 			this.table1.Add (this.spinbutton1);
 			global::Gtk.Table.TableChild w5 = ((global::Gtk.Table.TableChild)(this.table1 [this.spinbutton1]));

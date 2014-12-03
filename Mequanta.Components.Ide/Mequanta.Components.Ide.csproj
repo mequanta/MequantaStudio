@@ -49,12 +49,9 @@
     <Reference Include="atk-sharp, Version=2.4.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="Mono.Posix, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
-    <Reference Include="Xwt.Gtk">
-      <HintPath>C:\Program Files %28x86%29\Xamarin Studio\bin\Xwt.Gtk.dll</HintPath>
-    </Reference>
+    <Reference Include="Mono.Posix" />
     <Reference Include="Xwt">
-      <HintPath>C:\Program Files %28x86%29\Xamarin Studio\bin\Xwt.dll</HintPath>
+      <HintPath>..\..\monodevelop\main\external\xwt\Xwt\bin\Debug\Xwt.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
